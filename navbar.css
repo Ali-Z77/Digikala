@@ -1,0 +1,89 @@
+nav {
+  display: flex;
+  margin-top: 80px;
+  align-items: center;
+  font-weight: 500;
+  border-bottom: 2px solid rgb(210, 210, 210);
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+}
+
+nav div {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: rgb(94, 91, 91);
+  position: relative;
+  height: 30px;
+  white-space: nowrap;
+}
+
+nav div::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(226, 25, 68);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav div:hover::after {
+  transform: scaleX(1);
+}
+
+nav div a {
+  cursor: pointer;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.first-nav {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(60, 56, 56);
+  border-left: 1px solid rgb(220, 204, 204);
+  padding-left: 17px;
+  padding-bottom: 6px;
+  cursor: pointer;
+}
+
+.span2 {
+  margin-right: 7px;
+}
+
+.city-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.city-div-hover {
+ position: absolute;
+ left: 10px;
+ background-color: rgb(222, 204, 204);
+ padding: 5px;
+ border-radius: 4px;
+ opacity: 0;
+ top: 50px;
+ pointer-events: none;
+ transition: opacity .2s;
+ color: black;
+ padding-top: 11px;
+}
+
+.city-div:hover .city-div-hover {
+  opacity: 1;
+}
+
+.location-icon {
+  width: 16px;
+  margin-left: 8px;
+}
+
+

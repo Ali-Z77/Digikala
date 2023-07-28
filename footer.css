@@ -1,0 +1,92 @@
+footer {
+  border-top: 1px solid rgb(223, 211, 211);
+  margin-top: 100px;
+}
+
+.digi-logo img {
+  width: 120px;
+}
+
+.digi-logo {
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.digi-logo-label {
+  margin-left: 20px;
+  color: rgb(104, 102, 102);
+  font-weight: 400;
+}
+
+.digi-logo-container {
+  margin-right: 20px;
+}
+
+.khadamat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.khadamat div {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.khadamat img {
+  width: 50px;
+}
+
+.pov {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.social-media img {
+  width: 45px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.pov input {
+  height: 45px;
+  width: 275px;
+  border: none;
+  background-color: rgb(241, 240, 240);
+  border-radius: 8px;
+  font-family: Vazir;
+  padding-right: 15px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.pov button {
+  height: 45px;
+  width: 60px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(218, 212, 212);
+  color: white;
+  font-family: Vazir;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pov p {
+  color: gray;
+  font-size: 15px;
+}
+
