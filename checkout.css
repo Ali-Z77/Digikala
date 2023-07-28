@@ -1,0 +1,174 @@
+section {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.product-container {
+  border: 1px solid gray;
+  width: 800px;
+  height: 400px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+.product-title {
+  padding-right: 20px;
+}
+
+.product-title p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.product-title div {
+  font-size: 12px;
+  color: gray;
+}
+
+.product {
+  display: flex;
+  padding-top: 30px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+}
+
+.product img {
+  width: 120px;
+}
+
+.product-particuler {
+  padding-right: 25px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.product-particuler div {
+  display: flex;
+  align-items: center;
+}
+
+.product-particuler span {
+  padding-right: 10px;
+  font-size: 12px;
+  font-weight: 200;
+  color: gray;
+  white-space: nowrap;
+}
+
+#product-name {
+  padding-right: 0;
+  font-size: 13px;
+  color: black;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.product-particuler img {
+  width: 17px;
+}
+
+#garantee-icon {
+  width: 14px;
+}
+
+.blue-icon {
+  width: 8px;
+  height: 8px;
+  background-color: aqua;
+  border-radius: 4px;
+  margin-right: 4px;
+  margin-left: 5px;
+}
+
+.product-color {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  border-radius: 9px;
+}
+
+.delete-price {
+  display: flex;
+  align-items: center;
+}
+
+.delete-container {
+  width: 100px;
+  height: 45px;
+  border: 1px solid rgb(204, 198, 198);
+  margin-right: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.price {
+  margin-right: 30px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.delete-container img {
+  width: 16px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.product-number-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 200;
+  color: rgb(204, 198, 198);
+}
+
+#product-number {
+  color: rgb(231, 43, 68);
+  font-size: 14px;
+}
+
+#red-plus {
+  font-size: 25px;
+  color: rgb(231, 43, 68);
+}
+
+.total-checkout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  font-weight: 600;
+  width: 300px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  height: 250px;
+}
+
+.total-checkout button {
+  width: 260px;
+  height: 45px;
+  border: none;
+  background-color: rgb(231, 43, 68);
+  border-radius: 8px;
+  color: white;
+  font-family: Vazir;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.products-price {
+  padding-top: 40px;
+  display: flex;
+  column-gap: 100px;
+}
+
+.total-price {
+  display: flex;
+  column-gap: 100px;
+}
