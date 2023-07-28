@@ -100,12 +100,6 @@
   font-size: 21px;
 }
 
-#little-border {
-  border: 1px solid rgb(193, 184, 184);
-  width: 130px;
-  margin-right: 5px;
-}
-
 .product-particuler-1 {
   display: flex;
   align-items: center;
@@ -119,8 +113,8 @@
   margin-top: 15px;
 }
 
-.product-particuler-2 span, div {
-  padding-left: 10px;
+.product-particuler-2 span {
+  margin-left: 10px;
 }
 
 #star-vote {
@@ -158,7 +152,6 @@
   width: 25px;
   height: 35px;
   border-radius: 50%;
-  position: relative;
 }
 
 .div-1 img {
@@ -175,7 +168,6 @@
   padding-top: 10px;
   padding-right: 15px;
   border-radius: 8px;
-  position: absolute;
   top: 10px;
   pointer-events: none;
   opacity: 0;
@@ -221,7 +213,6 @@
   background-color: rgb(249, 245, 245);
   border: 1px solid rgb(210, 207, 207);
   border-radius: 8px;
-  position: sticky;
 }
 
 .sailer-1 {
