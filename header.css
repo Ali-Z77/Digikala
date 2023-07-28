@@ -46,7 +46,23 @@ body {
   padding-right: 15px;
   margin-left: 20px;
   margin-right: 15px;
-  
+  position: relative;
+}
+
+.checkout-number-container {
+  position: absolute;
+  display: flex;
+  width: 18px;
+  height: 16px;
+  background-color: rgb(231, 43, 68);
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+  top: 18px;
+  left: 18px;
 }
 
 .shopping-img {
