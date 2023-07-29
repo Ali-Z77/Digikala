@@ -1,3 +1,4 @@
+
 let checkoutHtml = '';
 
 products.forEach((product) => {
