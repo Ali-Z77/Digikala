@@ -21,4 +21,4 @@ const products = [
     price: "15,999,000 تومان",
     priceNumber: "15,999,000"
   }
-]
+];
