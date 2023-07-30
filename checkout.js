@@ -74,4 +74,3 @@ carts.forEach((product) => {
 });
 
 document.querySelector('.main-carts').innerHTML = checkoutHtml;
-console.log(document.querySelector('.js-add-to-cart-button'));
