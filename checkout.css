@@ -145,6 +145,7 @@
 #red-plus {
   font-size: 25px;
   color: rgb(231, 43, 68);
+  cursor: pointer;
 }
 
 .total-checkout {

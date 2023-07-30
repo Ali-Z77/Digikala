@@ -1,4 +1,3 @@
-
 let checkoutHtml = '';
 
 carts.forEach((product) => {
@@ -46,7 +45,7 @@ carts.forEach((product) => {
       <div class="delete-container">
         <div id="red-plus">+</div>
         <div class="product-number-container">
-          <span id="product-number">0</span>
+          <span id="product-number">${product.quantity}</span>
           <span>حداکثر</span>
         </div>
         <div>

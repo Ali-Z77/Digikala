@@ -3,7 +3,7 @@ const products = [
     image: "images/a54.jpg",
     title: "گوشی موبایل سامسونگ",
     brand: "images/samsung.jpg",
-    name: "گوشی موبایل سامسونگ مدل Galaxy A54 5G دو سیم کارت ظرفیت 128 گیگابایت و رم 6 گیگابایت - ویتنا:",
+    name: "گوشی موبایل سامسونگ مدل Galaxy A54 5G دو سیم کارت ظرفیت 128 گیگابایت و رم 6 گیگابایت - ویتنام",
     nameEn:"Samsung Galaxy A54 5G Dual SIM 256GB And 8GB RAM Mobile Phone with Samsung charger",
     starNumber: "4",
     starVote: "(1)",
