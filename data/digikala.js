@@ -1,7 +1,7 @@
 
 let checkoutHtml = '';
 
-carts.forEach((cart) => {
+carts.forEach((product) => {
   checkoutHtml += 
   `
 <div class="cart-container">
@@ -12,21 +12,21 @@ carts.forEach((cart) => {
     </div>
     <div class="product">
       <div>
-        <img src="${cart.image}">
+        <img src="${product.image}">
       </div>
       <div class="product-particuler">
-        <span id="product-name">${cart.name}</span>
+        <span id="product-name">${product.name}</span>
         <div class="product-color-container">
           <div class="product-color"></div>
-          <span>${cart.color}</span>
+          <span>${product.color}</span>
         </div>
         <div>
           <img id="garantee-icon" src="images/garantee.png">
-          <span>${cart.garantee}</span>
+          <span>${product.garantee}</span>
         </div>
         <div>
           <img src="images/house-icon.png">
-          <span>${cart.sailer}<span>
+          <span>${product.sailer}<span>
         </div>
         <div>
           <div class="blue-icon"></div>
@@ -34,11 +34,11 @@ carts.forEach((cart) => {
         </div>
         <div>
           <img src="images/red-truck.png">
-          <span>${cart.sender}</span>
+          <span>${product.sender}</span>
         </div>
         <div>
           <img src="images/fast-emission.png">
-          <span>${cart.citySender}</span>
+          <span>${product.citySender}</span>
         </div>
       </div>
     </div>
@@ -54,18 +54,18 @@ carts.forEach((cart) => {
         </div>
       </div>
       <div class="price">
-        <span>${cart.price}</span>
+        <span>${product.price}</span>
       </div>
     </div>
   </div>
   <div class="total-checkout">
     <div class="products-price">
       <span>قیمت کالاها (1)</span>
-      <span>${cart.priceNumber}</span>
+      <span>${product.priceNumber}</span>
     </div>
     <div class="total-price">
       <span>جمع سبد خرید</span>
-      <span>${cart.priceNumber}</span>
+      <span>${product.priceNumber}</span>
     </div>
     <button>ثبت سفارش</button>
   </div>
@@ -73,4 +73,5 @@ carts.forEach((cart) => {
   `  
 });
 
-document.querySelector('.main-carts').innerHTML = checkoutHtml
+document.querySelector('.main-carts').innerHTML = checkoutHtml;
+console.log(document.querySelector('.js-add-to-cart-button'));
