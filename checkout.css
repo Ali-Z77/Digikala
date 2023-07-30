@@ -1,15 +1,26 @@
-section {
+
+.main-carts {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 100px;
+  row-gap: 10px;
 }
 
-.product-container {
-  border: 1px solid gray;
-  width: 800px;
+.cart-container {
   height: 400px;
   margin-left: 20px;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+}
+
+.cart-right-section {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  border: 1px solid gray;
+  border-radius: 8px;
 }
 
 .product-title {
