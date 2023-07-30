@@ -88,7 +88,9 @@ products.forEach((product) => {
               <div class="off-percent"><span>${product.offPercent}</span></div>
             </div>
             <div class="price"><span id="price-number">${product.price}</span><span>تومان</span></div>
-            <button class="js-add-to-cart-button" data-product-name="${product.name}">افزودن به سبد</button>
+            <div class="sailer-8-added-checkout">
+              <button class="js-add-to-cart-button" data-product-name="${product.name}">افزودن به سبد</button>
+            </div>
           </div>
         </div>
       </div>
@@ -96,7 +98,11 @@ products.forEach((product) => {
   </div>`
 });
 
+
+
 document.querySelector('.main-container').innerHTML = productHtml;
+
+/*
 
 document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
   button.addEventListener('click', () => {
@@ -112,6 +118,35 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
       price: "15,999,000 تومان",
       priceNumber: "15,999,000"
     });
-    console.log(carts);
   });
 });
+
+*/
+const addButton = document.querySelector('.sailer-8-added-checkout')
+
+function addedToCart() {
+  
+  if (addButton) {
+    addButton.innerHTML = `
+      <div class="delete-container">
+        <div id="red-plus">+</div>
+        <div class="product-number-container">
+          <span id="product-number">1</span>
+          <span>حداکثر</span>
+        </div>
+        <div>
+          <img src="images/red-recycle-bin-icon.jpg">
+        </div>
+      </div>
+      <div class="in-your-cart">
+        <p>در سبد شما</p>
+        <div>
+          مشاهده
+          <a href="checkout.html">سبد خرید</a>
+        </div>
+      </div>`;
+  };
+};
+
+addButton.addEventListener('click', addedToCart)
+
