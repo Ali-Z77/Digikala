@@ -98,11 +98,7 @@ products.forEach((product) => {
   </div>`
 });
 
-
-
 document.querySelector('.main-container').innerHTML = productHtml;
-
-/*
 
 document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
   button.addEventListener('click', () => {
@@ -121,22 +117,21 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
   });
 });
 
-*/
-const addButton = document.querySelector('.sailer-8-added-checkout')
+const addButton = document.querySelector('.js-add-to-cart-button');
 
-function addedToCart() {
-  
-  if (addButton) {
-    addButton.innerHTML = `
-      <div class="delete-container">
-        <div id="red-plus">+</div>
-        <div class="product-number-container">
-          <span id="product-number">1</span>
-          <span>حداکثر</span>
-        </div>
-        <div>
-          <img src="images/red-recycle-bin-icon.jpg">
-        </div>
+let changeButton = document.querySelector('.sailer-8-added-checkout');
+
+  function addToCart() {
+    changeButton.innerHTML = `
+    <div class="delete-container">
+      <div id="red-plus">+</div>
+      <div class="product-number-container">
+        <span id="product-number">1</span>
+        <span>حداکثر</span>
+      </div>
+      <div>
+        <img class="red-recycle" src="images/red-recycle-bin-icon.jpg">
+      </div>
       </div>
       <div class="in-your-cart">
         <p>در سبد شما</p>
@@ -145,8 +140,20 @@ function addedToCart() {
           <a href="checkout.html">سبد خرید</a>
         </div>
       </div>`;
-  };
+  }
+
+  addButton.addEventListener('click', addToCart);
+
+/*
+const deleteButton = document.querySelector('.red-recycle');
+
+function deleteFromCart() {
+  changeButton.innerHTML = `
+  <div class="sailer-8-added-checkout">
+    <button class="js-add-to-cart-button">افزودن به سبد</button>
+  </div>`
 };
 
-addButton.addEventListener('click', addedToCart)
+deleteButton.addEventListener('click', deleteFromCart)
+*/
 
