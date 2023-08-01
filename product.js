@@ -89,7 +89,7 @@ products.forEach((product) => {
             </div>
             <div class="price"><span id="price-number">${product.price}</span><span>تومان</span></div>
             <div class="sailer-8-added-checkout">
-              <button class="js-add-to-cart-button" data-product-name="${product.name}">افزودن به سبد</button>
+              <button class="js-add-to-cart-button" data-product-id="${product.id}">افزودن به سبد</button>
             </div>
           </div>
         </div>
@@ -102,21 +102,44 @@ document.querySelector('.main-container').innerHTML = productHtml;
 
 document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
   button.addEventListener('click', () => {
-    const productName = button.dataset.productName;
-    carts.push({
-      image: "images/a54.jpg",
-      name: "گوشی موبایل سامسونگ مدل Galaxy A54 5G دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت - ویتنام",
-      color: "مشکی",
-      garantee: "گارانتی 18 ماهه اسمارت تکنولوژی قشمگارانتی 18 ماهه اسمارت تکنولوژی قشم",
-      sailer: "اسمارت تکنولوژی قشم",
-      sender: "ارسال دیجی‌کالا",
-      citySender: "ارسال فوری (شهر تهران)",
-      price: "15,999,000 تومان",
-      priceNumber: "15,999,000"
+    const productId = button.dataset.productId;
+
+    let matchingItem;
+
+    carts.forEach((item) => {
+      if (productId === item.productId) {
+        matchingItem = item;
+      }
     });
+    
+    if (matchingItem) {
+      matchingItem.quantity += 1;
+    } else {
+      carts.push({
+        productId: productId,
+        image: "images/a54.jpg",
+        name: "گوشی موبایل سامسونگ مدل Galaxy A54 5G دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت - ویتنام",
+        color: "مشکی",
+        garantee: "گارانتی 18 ماهه اسمارت تکنولوژی قشمگارانتی 18 ماهه اسمارت تکنولوژی قشم",
+        sailer: "اسمارت تکنولوژی قشم",
+        sender: "ارسال دیجی‌کالا",
+        citySender: "ارسال فوری (شهر تهران)",
+        price: "15,999,000 تومان",
+        priceNumber: "15,999,000",
+        quantity: 1
+      });
+    }
+    
+    cartQuantity = 0;
+
+    carts.forEach((item) => {
+      cartQuantity += item.quantity;
+    });
+    
+    document.querySelector('.cart-quantity').innerHTML = cartQuantity
   });
 });
-
+/*
 const addButton = document.querySelector('.js-add-to-cart-button');
 
 let changeButton = document.querySelector('.sailer-8-added-checkout');
@@ -144,7 +167,6 @@ let changeButton = document.querySelector('.sailer-8-added-checkout');
 
   addButton.addEventListener('click', addToCart);
 
-/*
 const deleteButton = document.querySelector('.red-recycle');
 
 function deleteFromCart() {
