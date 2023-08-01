@@ -91,19 +91,8 @@ products.forEach((product) => {
               <div class="off-percent"><span>${product.offPercent}</span></div>
             </div>
             <div class="price"><span id="price-number">${product.price}</span><span>تومان</span></div>
-            <div class="sailer-8-added-checkout">
-              <div class="delete-container">
-                <div id="red-plus">+</div>
-                <div class="product-number-container">
-                  <span id="product-number">1</span>
-                  <span>حداکثر</span>
-                </div>
-                <div>
-                  <div id="red-minus">-</div>
-                </div>
-              </div>
+              <span id="added-to-cart">به سبد خرید اضافه شد!</span>
               <button class="js-add-to-cart-button" data-product-id="${product.id}">افزودن به سبد</button>
-            </div>
           </div>
         </div>
       </div>
@@ -135,17 +124,8 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
   });
 });
 
-const addButton = document.querySelector('.js-add-to-cart-button');
+const addedToCart = document.getElementById("added-to-cart");
 
-const addButtonText = addButton.innertext;
-
-addButton.addEventListener('click', () => {
-  if (addButton.innertext === addButtonText) {
-    addButton.innerHTML = 'اضافه شد';
-    addButton.classList.add('js-add-to-cart-button-active')
-  }
+document.querySelector('.js-add-to-cart-button').addEventListener('click', () => {
+addedToCart.style.display = "block";
 });
-
-const productNumber = document.querySelector('#product-number');
-
-
