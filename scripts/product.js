@@ -1,5 +1,5 @@
 import {products} from "../data/products.js";
-import {carts} from "../data/carts.js";
+import {carts, addToCart} from "../data/carts.js";
 
 let productHtml = ''
 
@@ -113,43 +113,25 @@ products.forEach((product) => {
 
 document.querySelector('.main-container').innerHTML = productHtml;
 
+
+
+function updateCartQuantity() {
+  let cartQuantity = 0;
+
+  carts.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+    
+  document.querySelector('.cart-quantity').innerHTML = cartQuantity
+}
+
 document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
   button.addEventListener('click', () => {
     const productId = button.dataset.productId;
 
-    let matchingItem;
+    addToCart(productId);
 
-    carts.forEach((item) => {
-      if (productId === item.productId) {
-        matchingItem = item;
-      }
-    });
-    
-    if (matchingItem) {
-      matchingItem.quantity += 1;
-    } else {
-      carts.push({
-        productId: productId,
-        image: "images/a54.jpg",
-        name: "گوشی موبایل سامسونگ مدل Galaxy A54 5G دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت - ویتنام",
-        color: "مشکی",
-        garantee: "گارانتی 18 ماهه اسمارت تکنولوژی قشمگارانتی 18 ماهه اسمارت تکنولوژی قشم",
-        sailer: "اسمارت تکنولوژی قشم",
-        sender: "ارسال دیجی‌کالا",
-        citySender: "ارسال فوری (شهر تهران)",
-        price: "15,999,000 تومان",
-        priceNumber: "15,999,000",
-        quantity: 1
-      });
-    }
-
-    let cartQuantity = 0;
-
-    carts.forEach((item) => {
-      cartQuantity += item.quantity;
-    });
-      
-    document.querySelector('.cart-quantity').innerHTML = cartQuantity
+    updateCartQuantity();
   });
 });
 
@@ -164,5 +146,6 @@ addButton.addEventListener('click', () => {
   }
 });
 
+const productNumber = document.querySelector('#product-number');
 
 
