@@ -1,3 +1,5 @@
+import { carts } from "../data/carts.js";
+
 let checkoutHtml = '';
 
 carts.forEach((product) => {

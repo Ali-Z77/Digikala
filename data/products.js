@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     image: "images/a54.jpg",
     title: "گوشی موبایل سامسونگ",
