@@ -133,7 +133,7 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
       });
     }
 
-    cartQuantity = 0;
+    let cartQuantity = 0;
 
     carts.forEach((item) => {
       cartQuantity += item.quantity;
@@ -142,7 +142,7 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
     document.querySelector('.cart-quantity').innerHTML = cartQuantity
   });
 });
-/*
+
 const addButton = document.querySelector('.js-add-to-cart-button');
 
 let changeButton = document.querySelector('.sailer-8-added-checkout');
@@ -169,7 +169,7 @@ let changeButton = document.querySelector('.sailer-8-added-checkout');
   }
 
   addButton.addEventListener('click', addToCart);
-
+/*
 const deleteButton = document.querySelector('.red-recycle');
 
 function deleteFromCart() {
