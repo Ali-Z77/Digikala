@@ -92,6 +92,16 @@ products.forEach((product) => {
             </div>
             <div class="price"><span id="price-number">${product.price}</span><span>تومان</span></div>
             <div class="sailer-8-added-checkout">
+              <div class="delete-container">
+                <div id="red-plus">+</div>
+                <div class="product-number-container">
+                  <span id="product-number">1</span>
+                  <span>حداکثر</span>
+                </div>
+                <div>
+                  <div id="red-minus">-</div>
+                </div>
+              </div>
               <button class="js-add-to-cart-button" data-product-id="${product.id}">افزودن به سبد</button>
             </div>
           </div>
@@ -145,40 +155,14 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
 
 const addButton = document.querySelector('.js-add-to-cart-button');
 
-let changeButton = document.querySelector('.sailer-8-added-checkout');
+const addButtonText = addButton.innertext;
 
-  function addToCart() {
-    changeButton.innerHTML = `
-    <div class="delete-container">
-      <div id="red-plus">+</div>
-      <div class="product-number-container">
-        <span id="product-number">1</span>
-        <span>حداکثر</span>
-      </div>
-      <div>
-        <img class="red-recycle" src="images/red-recycle-bin-icon.jpg">
-      </div>
-      </div>
-      <div class="in-your-cart">
-        <p>در سبد شما</p>
-        <div>
-          مشاهده
-          <a href="checkout.html">سبد خرید</a>
-        </div>
-      </div>`;
+addButton.addEventListener('click', () => {
+  if (addButton.innertext === addButtonText) {
+    addButton.innerHTML = 'اضافه شد';
+    addButton.classList.add('js-add-to-cart-button-active')
   }
+});
 
-  addButton.addEventListener('click', addToCart);
-/*
-const deleteButton = document.querySelector('.red-recycle');
 
-function deleteFromCart() {
-  changeButton.innerHTML = `
-  <div class="sailer-8-added-checkout">
-    <button class="js-add-to-cart-button">افزودن به سبد</button>
-  </div>`
-};
-
-deleteButton.addEventListener('click', deleteFromCart)
-*/
 
