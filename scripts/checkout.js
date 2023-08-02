@@ -5,7 +5,7 @@ let checkoutHtml = '';
 carts.forEach((product) => {
   checkoutHtml += 
   `
-  <div class="cart-right-section">
+  <div class="cart-right-section js-cart-right-section-${product.productId}">
     <div class="product-title">
       <p>سبد خرید شما</p>
       <div>۱ کالا</div>
@@ -67,8 +67,11 @@ document.querySelectorAll('.delete-button').forEach((button) => {
   button.addEventListener('click', () => {
     const productId = button.dataset.productId;
     removeFromCart(productId);
-  })
-})
+
+    const container = document.querySelector(`.js-cart-right-section-${productId}`)
+    container.remove();
+  });
+});
 
 /*
 document.getElementById("red-plus").addEventListener('click', () => {
