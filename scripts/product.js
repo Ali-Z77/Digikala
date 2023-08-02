@@ -152,3 +152,23 @@ addButton.addEventListener('click', () => {
 addedToCart.style.display = "flex";
 addButton.style.display = "none";
 });
+
+function updateProductNumber() {
+  let productNumber = 0;
+
+  carts.forEach((cartItem) => {
+    productNumber += cartItem.quantity;
+  });
+
+  document.getElementById("product-number").innerHTML = productNumber;
+}
+
+document.getElementById("red-plus").addEventListener('click', () => {
+
+    addToCart();
+
+    updateCartQuantity();
+
+    updateProductNumber();
+
+  });
