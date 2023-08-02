@@ -122,9 +122,7 @@ products.forEach((product) => {
 
 document.querySelector('.main-container').innerHTML = productHtml;
 
-
-
-function updateCartQuantity() {
+export function updateCartQuantity() {
   let cartQuantity = 0;
 
   carts.forEach((cartItem) => {
@@ -153,7 +151,7 @@ addedToCart.style.display = "flex";
 addButton.style.display = "none";
 });
 
-function updateProductNumber() {
+export function updateProductNumber() {
   let productNumber = 0;
 
   carts.forEach((cartItem) => {
@@ -172,5 +170,3 @@ document.getElementById("red-plus").addEventListener('click', () => {
     updateProductNumber();
 
   });
-
-  console.log(products);

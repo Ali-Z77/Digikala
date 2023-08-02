@@ -1,13 +1,15 @@
-
 .cart-container {
-  height: 400px;
+  height: 100%;
   display: flex;
+  margin-top: 100px;
+  justify-content: space-evenly;
 }
 
-.total-container {
-  display: inline;
-  margin-left: auto;
-  margin-right: auto;
+.right-section-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
 .total-checkout {
@@ -110,6 +112,8 @@
 .delete-price {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 .delete-container {

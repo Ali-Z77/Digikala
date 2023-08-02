@@ -1,11 +1,11 @@
-import { carts } from "../data/carts.js";
+import { carts, addToCart } from "../data/carts.js";
+import { updateCartQuantity, updateProductNumber } from "./product.js";
 
 let checkoutHtml = '';
 
 carts.forEach((product) => {
   checkoutHtml += 
   `
-<div class="cart-container">
   <div class="cart-right-section">
     <div class="product-title">
       <p>سبد خرید شما</p>
@@ -59,19 +59,18 @@ carts.forEach((product) => {
       </div>
     </div>
   </div>
-  <div class="total-checkout">
-    <div class="products-price">
-      <span>قیمت کالاها (1)</span>
-      <span>${product.priceNumber}</span>
-    </div>
-    <div class="total-price">
-      <span>جمع سبد خرید</span>
-      <span>${product.priceNumber}</span>
-    </div>
-    <button>ثبت سفارش</button>
-  </div>
-</div>
   `  
 });
 
-document.querySelector('.main-carts').innerHTML = checkoutHtml;
+document.querySelector('.right-section-container').innerHTML = checkoutHtml;
+/*
+document.getElementById("red-plus").addEventListener('click', () => {
+
+  addToCart();
+
+  updateCartQuantity();
+
+  updateProductNumber();
+
+});
+*/
