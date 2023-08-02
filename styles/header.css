@@ -57,14 +57,13 @@ body {
   position: absolute;
   display: flex;
   width: 18px;
-  height: 16px;
+  height: 18px;
   background-color: rgb(231, 43, 68);
   border-radius: 6px;
   color: white;
   font-size: 12px;
   align-items: center;
   justify-content: center;
-  padding-top: 2px;
   top: 18px;
   left: 18px;
 }
@@ -99,10 +98,9 @@ body {
   border: none;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  background-color: rgb(244, 246, 247);
+  background-color: rgb(236, 236, 236);
   font-family: Vazir;
   padding-right: 8px;
-  background: url(images/search-icon.jpg);
 }
 
 input[type="text"]:focus {
