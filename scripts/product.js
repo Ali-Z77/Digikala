@@ -90,9 +90,29 @@ products.forEach((product) => {
               <span class="off-number">${product.offNumber}</span>
               <div class="off-percent"><span>${product.offPercent}</span></div>
             </div>
-            <div class="price"><span id="price-number">${product.price}</span><span>تومان</span></div>
-              <span id="added-to-cart">به سبد خرید اضافه شد!</span>
-              <button class="js-add-to-cart-button" data-product-id="${product.id}">افزودن به سبد</button>
+            <div class="price">
+            <span id="price-number">${product.price}</span><span>تومان</span>
+            </div>
+            <div class="main-delete">
+              <div class="delete-container">
+                <div id="red-plus">+</div>
+                <div class="product-number-container">
+                  <span id="product-number">1</span>
+                  <span>حداکثر</span>
+                </div>
+                <div>
+                  <img src="images/red-recycle-bin-icon.jpg">
+                </div>
+              </div>
+              <div class="in-youre-cart">
+                <span>در سبد شما</span>
+                <span>
+                  <span>مشاهده</span>
+                  <a id="visit-cart" href="checkout.html"><span>سبد خرید</span></a>
+                </span>
+              </div>
+            </div>   
+            <button class="js-add-to-cart-button" data-product-id="${product.id}">افزودن به سبد</button>
           </div>
         </div>
       </div>
@@ -124,8 +144,11 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
   });
 });
 
-const addedToCart = document.getElementById("added-to-cart");
+const addedToCart = document.querySelector('.main-delete');
 
-document.querySelector('.js-add-to-cart-button').addEventListener('click', () => {
-addedToCart.style.display = "block";
+const addButton = document.querySelector('.js-add-to-cart-button');
+
+addButton.addEventListener('click', () => {
+addedToCart.style.display = "flex";
+addButton.style.display = "none";
 });
