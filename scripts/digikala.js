@@ -34,7 +34,6 @@ function addToProduct(productId) {
     });
   };
 };
-console.log(products);
 document.querySelectorAll('.js-add-to-product').forEach((href) => {
   href.addEventListener('click', () => {
     const productId = href.dataset.productId;

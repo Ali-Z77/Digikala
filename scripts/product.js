@@ -172,3 +172,5 @@ document.getElementById("red-plus").addEventListener('click', () => {
     updateProductNumber();
 
   });
+
+  console.log(products);
