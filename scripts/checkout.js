@@ -1,5 +1,4 @@
-import { carts, addToCart } from "../data/carts.js";
-import { updateCartQuantity, updateProductNumber } from "./product.js";
+import { carts, removeFromCart } from "../data/carts.js";
 
 let checkoutHtml = '';
 
@@ -51,7 +50,7 @@ carts.forEach((product) => {
           <span>حداکثر</span>
         </div>
         <div>
-          <img src="images/red-recycle-bin-icon.jpg">
+          <img class="delete-button" data-product-id="${product.productId}" src="images/red-recycle-bin-icon.jpg">
         </div>
       </div>
       <div class="price">
@@ -63,6 +62,14 @@ carts.forEach((product) => {
 });
 
 document.querySelector('.right-section-container').innerHTML = checkoutHtml;
+
+document.querySelectorAll('.delete-button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const productId = button.dataset.productId;
+    removeFromCart(productId);
+  })
+})
+
 /*
 document.getElementById("red-plus").addEventListener('click', () => {
 
