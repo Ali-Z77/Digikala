@@ -70,9 +70,9 @@ document.querySelectorAll('.delete-button').forEach((button) => {
 
     const container = document.querySelector(`.js-cart-right-section-${productId}`)
     container.remove();
+    console.log(carts)
   });
 });
-
 /*
 document.getElementById("red-plus").addEventListener('click', () => {
 

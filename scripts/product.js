@@ -93,25 +93,15 @@ products.forEach((product) => {
             <div class="price">
             <span id="price-number">${product.price}</span><span>تومان</span>
             </div>
-            <div class="main-delete">
-              <div class="delete-container">
-                <div id="red-plus">+</div>
-                <div class="product-number-container">
-                  <span id="product-number">1</span>
-                  <span>حداکثر</span>
-                </div>
-                <div>
-                  <img src="images/red-recycle-bin-icon.jpg">
-                </div>
-              </div>
+            <div class="in-youre-cart-container">
               <div class="in-youre-cart">
-                <span>در سبد شما</span>
-                <span>
-                  <span>مشاهده</span>
-                  <a id="visit-cart" href="checkout.html"><span>سبد خرید</span></a>
-                </span>
+              <span>در سبد شما</span>
+              <span>
+                <span>مشاهده</span>
+                <a id="visit-cart" href="checkout.html"><span>سبد خرید</span></a>
+              </span>
               </div>
-            </div>   
+            </div>  
             <button class="js-add-to-cart-button" data-product-id="${product.id}">افزودن به سبد</button>
           </div>
         </div>
@@ -130,6 +120,7 @@ export function updateCartQuantity() {
   });
     
   document.querySelector('.cart-quantity').innerHTML = cartQuantity
+
 }
 
 document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
@@ -139,17 +130,13 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
     addToCart(productId);
 
     updateCartQuantity();
+
   });
 });
 
 const addedToCart = document.querySelector('.main-delete');
 
 const addButton = document.querySelector('.js-add-to-cart-button');
-
-addButton.addEventListener('click', () => {
-addedToCart.style.display = "flex";
-addButton.style.display = "none";
-});
 
 export function updateProductNumber() {
   let productNumber = 0;
@@ -161,12 +148,9 @@ export function updateProductNumber() {
   document.getElementById("product-number").innerHTML = productNumber;
 }
 
-document.getElementById("red-plus").addEventListener('click', () => {
+const inYoureCart = document.querySelector('.in-youre-cart-container');
 
-    addToCart();
+addButton.addEventListener('click', () => {
+  inYoureCart.style.display = 'flex';
+})
 
-    updateCartQuantity();
-
-    updateProductNumber();
-
-  });
