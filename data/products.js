@@ -1,7 +1,7 @@
 export const products = [
   {
-    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c7",
-    image: "images/a54.jpg",
+    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+    image: "images/product-images/a54.jpg",
     title: "گوشی موبایل سامسونگ",
     brand: "images/samsung.jpg",
     name: "گوشی موبایل سامسونگ مدل Galaxy A54 5G دو سیم کارت ظرفیت 128 گیگابایت و رم 6 گیگابایت - ویتنام",
