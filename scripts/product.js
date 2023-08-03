@@ -102,7 +102,7 @@ products.forEach((product) => {
               </span>
               </div>
             </div>  
-            <button class="js-add-to-cart-button" data-product-id="${product.id}">افزودن به سبد</button>
+            <button class="js-add-to-cart-button" data-product-id="${product.productId}">افزودن به سبد</button>
           </div>
         </div>
       </div>
@@ -111,6 +111,7 @@ products.forEach((product) => {
 });
 
 document.querySelector('.main-container').innerHTML = productHtml;
+
 
 export function updateCartQuantity() {
   let cartQuantity = 0;
@@ -140,4 +141,8 @@ const inYoureCart = document.querySelector('.in-youre-cart-container');
 
 addButton.addEventListener('click', () => {
   inYoureCart.style.display = 'flex';
-})
+});
+
+
+
+
