@@ -1,0 +1,110 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.current-container {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 12px;
+  color: gray;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+#title {
+  font-weight: 700;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(246, 238, 238);
+  padding: 30px 20px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.product-container:hover {
+  box-shadow: 1px 1px 10px 1px rgb(220, 219, 219);
+}
+
+.product-image{
+  width: 100%;
+}
+
+.image-container {
+  margin-bottom: 10px;
+}
+
+.text-1 {
+  display: flex;
+  align-items: center;
+  color: gray;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.text-1-1 {
+  display: flex;
+  column-gap: 5px;
+  border: none;
+  background-color: rgb(247, 247, 247);
+  border-radius: 10px;
+  padding: 1px 5px;
+}
+
+.red-truck {
+  width: 18px;
+  height: 17px;
+}
+
+.text-2 {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.756);
+  line-height: 25px;
+}
+
+.text-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fast-emission-icon {
+  width: 18px;
+}
+
+.emission,
+.score {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  column-gap: 7px;
+  font-size: 12px;
+  color: rgb(86, 84, 84);
+  font-weight: 600;
+}
+
+.score img {
+  width: 17px;
+}
+
+.text-4 {
+  float: left;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.756);
+}
+
+#tooman {
+  font-size: 12px;
+}
