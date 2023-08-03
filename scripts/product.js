@@ -1,5 +1,5 @@
 import {products} from "../data/products.js";
-import {carts, addToCart, saveCarts} from "../data/carts.js";
+import {carts, addToCart} from "../data/carts.js";
 
 let productHtml = ''
 
@@ -160,4 +160,3 @@ const inYoureCart = document.querySelector('.in-youre-cart-container');
 addButton.addEventListener('click', () => {
   inYoureCart.style.display = 'flex';
 })
-

@@ -1,4 +1,5 @@
-import { products } from "../data/products";
+import {products} from "../data/products.js";
+
 
 function addToProduct(productId) {
   let matchingItem;
@@ -39,8 +40,6 @@ document.querySelectorAll('.js-add-to-product').forEach((href) => {
     const productId = href.dataset.productId;
 
     addToProduct(productId);
-
-    updateCartQuantity();
   });
 });
 
