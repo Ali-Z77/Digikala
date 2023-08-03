@@ -6,6 +6,10 @@
   margin-top: 50px;
 }
 
+.container a {
+  text-decoration: none;
+}
+
 .current-container {
   display: flex;
   align-items: center;
