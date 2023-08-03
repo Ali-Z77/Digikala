@@ -134,25 +134,6 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
   });
 });
 
-let saveQuantity;
-
-carts.forEach((item) => {
-  saveQuantity = item.quantity;
-});
-
-function cartQuantity2() {
-  
-  if (saveQuantity === undefined) {
-    saveQuantity = 0;
-  } else {
-    document.querySelector('.cart-quantity').innerHTML = saveQuantity;
-  }
-};
-
-cartQuantity2();
-
-
-
 const addButton = document.querySelector('.js-add-to-cart-button');
 
 const inYoureCart = document.querySelector('.in-youre-cart-container');
