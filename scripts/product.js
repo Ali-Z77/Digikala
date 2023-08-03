@@ -1,5 +1,5 @@
 import {products} from "../data/products.js";
-import {carts, addToCart} from "../data/carts.js";
+import {carts, addToCart, saveCarts} from "../data/carts.js";
 
 let productHtml = ''
 
@@ -134,19 +134,26 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
   });
 });
 
-const addedToCart = document.querySelector('.main-delete');
+let saveQuantity;
+
+carts.forEach((item) => {
+  saveQuantity = item.quantity;
+});
+
+function cartQuantity2() {
+  
+  if (saveQuantity === undefined) {
+    saveQuantity = 0;
+  } else {
+    document.querySelector('.cart-quantity').innerHTML = saveQuantity;
+  }
+};
+
+cartQuantity2();
+
+
 
 const addButton = document.querySelector('.js-add-to-cart-button');
-
-export function updateProductNumber() {
-  let productNumber = 0;
-
-  carts.forEach((cartItem) => {
-    productNumber += cartItem.quantity;
-  });
-
-  document.getElementById("product-number").innerHTML = productNumber;
-}
 
 const inYoureCart = document.querySelector('.in-youre-cart-container');
 
