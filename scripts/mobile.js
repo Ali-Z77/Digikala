@@ -1,5 +1,6 @@
 import {products2} from "../data/products2.js";
 import {products} from "../data/products.js";
+import { carts } from "../data/carts.js";
 
 let mobileHtml = '';
 
@@ -41,47 +42,6 @@ products.forEach((product) => {
 
 document.querySelector('.container').innerHTML = mobileHtml;
 
-/*
-export function addToProduct() {
-  document.querySelectorAll('.product-link').forEach((link) => {
-    link.addEventListener('click', () => {
-      const productId = link.dataset.productId;
-      let matchingItem;
-      products.forEach((productItem) => {
-        if (productId === productItem.productId) {
-          matchingItem = productItem;
-        }
-        products2.push({
-            productId: matchingItem.productId,
-            image: matchingItem.image,
-            title: matchingItem.title,
-            brand: matchingItem.brand,
-            name: matchingItem.name,
-            nameEn: matchingItem.nameEn,
-            starNumber: matchingItem.starNumber,
-            starVote: matchingItem.starVote,
-            comments: matchingItem.comments,
-            questions: matchingItem.questions,
-            color: matchingItem.color,
-            screenType: matchingItem.screenType,
-            screenSize: matchingItem.screenSize,
-            cameraResolution: matchingItem.cameraResolution,
-            systemOperation: matchingItem.systemOperation,
-            withItems: matchingItem.withItems,
-            sailer: matchingItem.sailer,
-            offNumber: matchingItem.offNumber,
-            offPercent: matchingItem.offPercent,
-            price: matchingItem.price
-        })
-        console.log(products2)
-    });
-  });
-});
-}
-*/
-
-
-
 export function saveProduct() {
   localStorage.setItem('products2', JSON.stringify(products2));
 }
@@ -122,6 +82,17 @@ function addToProduct(productId) {
   }
 }
 
+function updateCartQuantity() {
+  let cartQuantity = 0;
+
+  carts.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+    
+  document.querySelector('.cart-quantity').innerHTML = cartQuantity
+
+}
+
 document.querySelectorAll('.product-link').forEach((link) => {
   link.addEventListener('click', () => {
     const productId = link.dataset.productId;
@@ -129,6 +100,8 @@ document.querySelectorAll('.product-link').forEach((link) => {
     addToProduct(productId);
 
     saveProduct();
+
+    updateCartQuantity()
 
   });
 });
