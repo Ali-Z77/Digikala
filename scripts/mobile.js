@@ -106,6 +106,5 @@ document.querySelectorAll('.product-link').forEach((link) => {
   });
 });
 
-console.log(products2)
 
 
