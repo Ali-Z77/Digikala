@@ -1,9 +1,10 @@
-import {products} from "../data/products.js";
+
 import {carts, addToCart} from "../data/carts.js";
+import { products } from "../data/products.js";
 
 let productHtml = ''
 
-products.forEach((product) => {
+products.forEach((matchingItem) => {
   productHtml = `  
   <div class="product-container">
     <div class="product-image">
@@ -15,49 +16,49 @@ products.forEach((product) => {
         <img src="images/comparision.jpg">
         <img id="hamberger-icon" src="images/hamberger-menu.jpg">
       </div>
-      <div><img class="product-image-1" src="${product.image}"></div>
+      <div><img class="product-image-1" src="${matchingItem.image}"></div>
     </div>
     <div class="product-particuler-container">
       <div class="title">
-        <div><img src="${product.brand}"></div>
+        <div><img src="${matchingItem.brand}"></div>
         <div class="title-text">
-          <span>سامسونگ</span><span>/</span><span>${product.title}</span>
-          <p>${product.name}</p>
+          <span>سامسونگ</span><span>/</span><span>${matchingItem.title}</span>
+          <p>${matchingItem.name}</p>
         </div>
       </div>
       <div class="sailer-particuler">
         <div class="product-particuler">
           <div class="product-particuler-1">
-            <span>${product.nameEn}</span>
+            <span>${matchingItem.nameEn}</span>
           </div>
           <div class="product-particuler-2">
             <div id="yellow-star"><img src="images/star-yellow.png"></div>
-            <span id="star-number">${product.starNumber}</span>
-            <span id="star-vote">${product.starVote}</span>
+            <span id="star-number">${matchingItem.starNumber}</span>
+            <span id="star-vote">${matchingItem.starVote}</span>
             <span class="comments">&bull;</span>
-            <span class="comments">${product.comments}</span>
+            <span class="comments">${matchingItem.comments}</span>
             <span class="comments">&bull;</span>
-            <span class="comments">${product.questions}</span>
+            <span class="comments">${matchingItem.questions}</span>
           </div>
           <div class="product-particuler-3">
             <span>رنگ:</span>
-            <span>${product.color}</span>
+            <span>${matchingItem.color}</span>
             <div class="div-1"><img src="images/check-icon.png"></div>
             <div class="div-1-hover">مشکی</div>
           </div>
           <div class="product-particuler-4">
             <div><p class="bold-text">ویژگی ها</p></div>
-            <div><span>&bull;</span><span>فناوری صفحه‌نمایش :</span><p>${product.screenType}</p></div>
-            <div><span>&bull;</span><span>اندازه :</span><p>${product.screenSize}</p></div>
-            <div><span>&bull;</span><span>رزولوشن عکس :</span><p>${product.cameraResolution}</p></div>
-            <div><span>&bull;</span><span>نسخه سیستم عامل :</span><p>${product.systemOperation}</p></div>
-            <div><span>&bull;</span><span>اقلام همراه :</span><p>${product.withItems}</p></div>
+            <div><span>&bull;</span><span>فناوری صفحه‌نمایش :</span><p>${matchingItem.screenType}</p></div>
+            <div><span>&bull;</span><span>اندازه :</span><p>${matchingItem.screenSize}</p></div>
+            <div><span>&bull;</span><span>رزولوشن عکس :</span><p>${matchingItem.cameraResolution}</p></div>
+            <div><span>&bull;</span><span>نسخه سیستم عامل :</span><p>${matchingItem.systemOperation}</p></div>
+            <div><span>&bull;</span><span>اقلام همراه :</span><p>${matchingItem.withItems}</p></div>
           </div>
         </div>
         <div class="sailer-card">
           <div class="sailer-1">
             <span class="sailer-span-1">فروشنده</span>
-            <span class="sailer-span-2">${product.sailer}</span>
+            <span class="sailer-span-2">${matchingItem.sailer}</span>
           </div>
           <div class="sailer-2">
             <img src="images/digi-icon.png">
@@ -87,11 +88,11 @@ products.forEach((product) => {
           </div>
           <div class="sailer-7">
             <div class="off-container">
-              <span class="off-number">${product.offNumber}</span>
-              <div class="off-percent"><span>${product.offPercent}</span></div>
+              <span class="off-number">${matchingItem.offNumber}</span>
+              <div class="off-percent"><span>${matchingItem.offPercent}</span></div>
             </div>
             <div class="price">
-            <span id="price-number">${product.price}</span><span>تومان</span>
+            <span id="price-number">${matchingItem.price}</span><span>تومان</span>
             </div>
             <div class="in-youre-cart-container">
               <div class="in-youre-cart">
@@ -102,7 +103,7 @@ products.forEach((product) => {
               </span>
               </div>
             </div>  
-            <button class="js-add-to-cart-button" data-product-id="${product.productId}">افزودن به سبد</button>
+            <button class="js-add-to-cart-button" data-product-id="${matchingItem.productId}">افزودن به سبد</button>
           </div>
         </div>
       </div>
@@ -142,6 +143,8 @@ const inYoureCart = document.querySelector('.in-youre-cart-container');
 addButton.addEventListener('click', () => {
   inYoureCart.style.display = 'flex';
 });
+
+
 
 
 
