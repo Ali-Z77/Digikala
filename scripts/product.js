@@ -1,10 +1,10 @@
 
 import {carts, addToCart} from "../data/carts.js";
-import { products } from "../data/products.js";
+import { products2 } from "../data/products2.js";
 
 let productHtml = ''
 
-products.forEach((matchingItem) => {
+products2.forEach((matchingItem) => {
   productHtml = `  
   <div class="product-container">
     <div class="product-image">
