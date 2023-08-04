@@ -1,74 +1,101 @@
 import { carts, removeFromCart } from "../data/carts.js";
+import { products } from "../data/products.js";
 
 let checkoutHtml = '';
 
-carts.forEach((product) => {
-  checkoutHtml += 
-  `
-  <div class="cart-right-section js-cart-right-section-${product.productId}">
-    <div class="product-title">
-      <p>سبد خرید شما</p>
-      <div>۱ کالا</div>
-    </div>
-    <div class="product">
-      <div>
-        <img src="${product.image}">
-      </div>
-      <div class="product-particuler">
-        <span id="product-name">${product.name}</span>
-        <div class="product-color-container">
-          <div class="product-color"></div>
-          <span>${product.color}</span>
+carts.forEach((cartItem) => {
+  const productId = cartItem.productId;
+
+  let matching;
+
+  products.forEach((product) => {
+    if (product.productId === productId) {
+      matching = product;
+    }
+  });
+  
+  if (matching) {
+    checkoutHtml += `
+      <div class="right-section-container js-right-section-${matching.productId}">
+        <div class="cart-right-section">
+          <div class="product-title">
+            <p>سبد خرید شما</p>
+            <div>۱ کالا</div>
+          </div>
+          <div class="product">
+            <div>
+              <img src="${matching.image}">
+            </div>
+            <div class="product-particuler">
+              <span id="product-name">${matching.name}</span>
+              <div class="product-color-container">
+                <div class="product-color"></div>
+                <span>${matching.color}</span>
+              </div>
+              <div>
+                <img id="garantee-icon" src="images/garantee.png">
+                <span>گارانتی 18 ماهه اسمارت تکنولوژی قشمگارانتی 18 ماهه اسمارت تکنولوژی قشم</span>
+              </div>
+              <div>
+                <img src="images/house-icon.png">
+                <span>اسمارت تکنولوژی قشم</span>
+              </div>
+              <div>
+                <div class="blue-icon"></div>
+                <span>موجود در انبار دیجی‌کالا</span>
+              </div>
+              <div>
+                <img src="images/red-truck.png">
+                <span>ارسال دیجی‌کالا</span>
+              </div>
+              <div>
+                <img src="images/fast-emission.png">
+                <span>ارسال فوری (شهر تهران)</span>
+              </div>
+            </div>
+          </div>
+          <div class="delete-price">
+            <div class="delete-container">
+              <div id="red-plus">+</div>
+              <div class="product-number-container">
+                <span class="cart-quantity-2">1</span>
+                <span>حداکثر</span>
+              </div>
+              <div>
+                <img class="delete-button" data-product-id="${matching.productId}" src="images/red-recycle-bin-icon.jpg">
+              </div>
+            </div>
+            <div class="price">
+              <span>${matching.price}</span>
+            </div>
+          </div>
         </div>
-        <div>
-          <img id="garantee-icon" src="images/garantee.png">
-          <span>${product.garantee}</span>
-        </div>
-        <div>
-          <img src="images/house-icon.png">
-          <span>${product.sailer}<span>
-        </div>
-        <div>
-          <div class="blue-icon"></div>
-          <span>موجود در انبار دیجی‌کالا</span>
-        </div>
-        <div>
-          <img src="images/red-truck.png">
-          <span>${product.sender}</span>
-        </div>
-        <div>
-          <img src="images/fast-emission.png">
-          <span>${product.citySender}</span>
-        </div>
-      </div>
-    </div>
-    <div class="delete-price">
-      <div class="delete-container">
-        <div id="red-plus">+</div>
-        <div class="product-number-container">
-          <span id="product-number">${product.quantity}</span>
-          <span>حداکثر</span>
-        </div>
-        <div>
-          <img class="delete-button" data-product-id="${product.productId}" src="images/red-recycle-bin-icon.jpg">
-        </div>
-      </div>
-      <div class="price">
-        <span>${product.price}</span>
-      </div>
-    </div>
-  </div>
-  `  
+      </div>`
+  }
+ 
 });
 
 document.querySelector('.right-section-container').innerHTML = checkoutHtml;
+
+function updateCartQuantity() {
+  let cartQuantity = 0;
+
+  carts.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+    
+  document.querySelector('.cart-quantity-2').innerHTML = cartQuantity
+
+}
+
+updateCartQuantity();
 
 document.querySelectorAll('.delete-button').forEach((button) => {
   button.addEventListener('click', () => {
     const productId = button.dataset.productId;
     removeFromCart(productId);
 
-    const container = document.querySelector(`.js-cart-right-section-${productId}`)
+    const container = document.querySelector(`.js-right-section-${productId}`)
     container.remove();
   });
 });
