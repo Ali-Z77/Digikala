@@ -1,5 +1,10 @@
 
+
 export let carts = JSON.parse(localStorage.getItem('carts'));
+
+if (carts.productId === {}) {
+  carts = [];
+}
 
 export function saveCarts() {
   localStorage.setItem('carts', JSON.stringify(carts));
@@ -23,7 +28,7 @@ export function addToCart(productId) {
   }
   saveCarts();
 }
-
+/*
 let saveQuantity;
 
 carts.forEach((item) => {
@@ -40,7 +45,7 @@ function cartQuantity2() {
 };
 
 cartQuantity2();
-
+*/
 export function removeFromCart(productId) {
   const newCarts = [];
 
@@ -52,3 +57,18 @@ export function removeFromCart(productId) {
   carts = newCarts;
   saveCarts();
 }
+
+
+function updateCartQuantity() {
+  let cartQuantity = 0;
+
+  carts.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+    
+  document.querySelector('.cart-quantity').innerHTML = cartQuantity
+}
+
+updateCartQuantity()
+
+console.log(carts)

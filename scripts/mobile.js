@@ -106,5 +106,6 @@ document.querySelectorAll('.product-link').forEach((link) => {
   });
 });
 
+updateCartQuantity()
 
 

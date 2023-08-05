@@ -144,6 +144,7 @@ addButton.addEventListener('click', () => {
   inYoureCart.style.display = 'flex';
 });
 
+updateCartQuantity()
 
 
 
