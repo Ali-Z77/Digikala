@@ -58,7 +58,7 @@ carts.forEach((cartItem) => {
             <div class="delete-container">
               <div id="red-plus">+</div>
               <div class="product-number-container">
-                <span class="cart-quantity-2">1</span>
+                <span class="cart-quantity-2">${cartItem.quantity}</span>
                 <span>حداکثر</span>
               </div>
               <div>
@@ -86,16 +86,3 @@ document.querySelectorAll('.delete-button').forEach((button) => {
     container.remove();
   });
 });
-
-
-export function updateCartQuantity2() {
-  let cartQuantity = 0;
-
-  carts.forEach((cartItem) => {
-    cartQuantity = cartItem.quantity;
-  });
-    
-  document.querySelector('.cart-quantity-2').innerHTML = cartQuantity
-}
-
-updateCartQuantity2()

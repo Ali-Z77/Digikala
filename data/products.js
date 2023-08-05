@@ -19,7 +19,8 @@ export const products = [
     sailer: "5 فروشنده دیگر",
     offNumber: "16,300,000",
     offPercent: "5%",
-    price: "15,999,000"
+    price: "15,999,000",
+    quantity: 1
   },
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c7",
@@ -41,7 +42,8 @@ export const products = [
     sailer: "5 فروشنده دیگر",
     offNumber: "",
     offPercent: "",
-    price: "19,000,000"
+    price: "19,000,000",
+    quantity: 1
   },
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c8",
@@ -63,6 +65,7 @@ export const products = [
     sailer: "5 فروشنده دیگر",
     offNumber: "16,300,000",
     offPercent: "5%",
-    price: "15,999,000"
+    price: "15,999,000",
+    quantity: 1
   }
 ];
