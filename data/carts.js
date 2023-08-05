@@ -52,6 +52,4 @@ function updateCartQuantity() {
   document.querySelector('.cart-quantity').innerHTML = cartQuantity
 }
 
-updateCartQuantity()
-
-console.log(carts)
+updateCartQuantity();

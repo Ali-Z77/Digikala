@@ -9,6 +9,7 @@ products2.forEach((matchingItem) => {
   <div class="product-container">
     <div class="product-image">
       <div class="product-icons">
+        <img id="black-heart" src="images/black-heart.jpg">
         <img id="heart-icon" src="images/heart.png">
         <img src="images/share.png">
         <img src="images/notification.png">
@@ -43,7 +44,7 @@ products2.forEach((matchingItem) => {
           <div class="product-particuler-3">
             <span>رنگ:</span>
             <span>${matchingItem.color}</span>
-            <div class="div-1"><img src="images/check-icon.png"></div>
+            <div class="div-1"><img src="images/check-icon-white.png"></div>
             <div class="div-1-hover">مشکی</div>
           </div>
           <div class="product-particuler-4">
@@ -87,10 +88,6 @@ products2.forEach((matchingItem) => {
             <img src="images/i-icon.png">
           </div>
           <div class="sailer-7">
-            <div class="off-container">
-              <span class="off-number">${matchingItem.offNumber}</span>
-              <div class="off-percent"><span>${matchingItem.offPercent}</span></div>
-            </div>
             <div class="price">
             <span id="price-number">${matchingItem.price}</span><span>تومان</span>
             </div>
@@ -145,6 +142,17 @@ addButton.addEventListener('click', () => {
 });
 
 updateCartQuantity()
+
+document.querySelector('.div-1').style.backgroundColor = 'black';
+
+const emptyHeart = document.getElementById("heart-icon")
+
+const blackHeart = document.getElementById("black-heart")
+
+emptyHeart.addEventListener('click', () => {
+  emptyHeart.style.display = 'none';
+  blackHeart.style.display = 'block'
+});
 
 
 
