@@ -176,7 +176,7 @@ export const products = [
     price: "17,325,000",
   },
   {
-    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c13",
+    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c14",
     image: "images/product-images/s23.jpg",
     title: "گوشی موبایل سامسونگ",
     brand: "images/samsung.jpg",
@@ -198,11 +198,11 @@ export const products = [
     price: "42,480,000",
   },
   {
-    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c13",
+    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c15",
     image: "images/product-images/a73.jpg",
     title: "گوشی موبایل سامسونگ",
     brand: "images/samsung.jpg",
-    name: "گوشی موبایل سامسونگ مدل Galaxy A73 5G SM-A736B/DS دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
+    name: "گوشی موبایل سامسونگ مدل Galaxy A73 5G دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
     nameEn: "Samsung Galaxy A73 5G SM-A736B/DS Dual SIM 256GB And 8GB RAM Mobile Phone",
     starNumber: "4.2",
     starVote: "(1592)",
@@ -220,7 +220,7 @@ export const products = [
     price: "19,400,000",
   },
   {
-    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c13",
+    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c16",
     image: "images/product-images/a23.jpg",
     title: "گوشی موبایل سامسونگ",
     brand: "images/samsung.jpg",
@@ -242,7 +242,7 @@ export const products = [
     price: "8,495,000",
   },
   {
-    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c13",
+    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c17",
     image: "images/product-images/s22 ultra.jpg",
     title: "گوشی موبایل سامسونگ",
     brand: "images/samsung.jpg",
