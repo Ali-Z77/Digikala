@@ -29,7 +29,6 @@ carts.forEach((cartItem) => {
             <div class="product-particuler">
               <span id="product-name">${matching.name}</span>
               <div class="product-color-container">
-                <div class="product-color"></div>
                 <span>${matching.color}</span>
               </div>
               <div>

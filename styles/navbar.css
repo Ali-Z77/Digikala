@@ -66,15 +66,16 @@ nav div a {
 .city-div-hover {
  position: absolute;
  left: 10px;
- background-color: rgb(222, 204, 204);
+ background-color: rgb(82, 78, 78);
  padding: 5px;
  border-radius: 4px;
  opacity: 0;
  top: 50px;
  pointer-events: none;
  transition: opacity .2s;
- color: black;
+ color: white;
  padding-top: 11px;
+ font-weight: 600;
 }
 
 .city-div:hover .city-div-hover {

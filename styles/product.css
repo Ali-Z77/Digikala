@@ -156,7 +156,7 @@
   margin-right: 5px;
 }
 
-.div-1-hover {
+.div-hover {
   width: 37px;
   height: 35px;
   background-color: rgb(45, 43, 43);
@@ -169,7 +169,7 @@
   opacity: 0;
 }
 
-.div-1:hover .div-1-hover {
+.div-1:hover .div-hover {
   opacity: 1;
 }
 

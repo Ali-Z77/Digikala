@@ -45,7 +45,7 @@ products2.forEach((matchingItem) => {
             <span>رنگ:</span>
             <span>${matchingItem.color}</span>
             <div class="div-1"><img src="images/check-icon-white.png"></div>
-            <div class="div-1-hover">مشکی</div>
+            <div class="div-hover">مشکی</div>
           </div>
           <div class="product-particuler-4">
             <div><p class="bold-text">ویژگی ها</p></div>

@@ -27,7 +27,7 @@
 .cart-right-section {
   display: flex;
   flex-direction: column;
-  width: 800px;
+  width: 900px;
   border: 1px solid gray;
   border-radius: 8px;
 }
@@ -72,8 +72,8 @@
 .product-particuler span {
   padding-right: 10px;
   font-size: 12px;
-  font-weight: 200;
-  color: gray;
+  font-weight: 400;
+  color: rgb(95, 93, 93);
   white-space: nowrap;
 }
 
@@ -100,13 +100,6 @@
   border-radius: 4px;
   margin-right: 4px;
   margin-left: 5px;
-}
-
-.product-color {
-  width: 18px;
-  height: 18px;
-  background-color: black;
-  border-radius: 9px;
 }
 
 .delete-price {
