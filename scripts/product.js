@@ -9,13 +9,31 @@ products2.forEach((matchingItem) => {
   <div class="product-container">
     <div class="product-image">
       <div class="product-icons">
-        <img id="black-heart" src="images/black-heart.jpg">
-        <img id="heart-icon" src="images/heart.png">
-        <img src="images/share.png">
-        <img src="images/notification.png">
-        <img id="chart-icon" src="images/chart.jpg">
-        <img src="images/comparision.jpg">
-        <img id="hamberger-icon" src="images/hamberger-menu.jpg">
+        <div class="heart-container">
+          <img id="black-heart" src="images/black-heart.jpg">
+          <img id="heart-icon" src="images/heart.png">
+          <div class="icon-hover">اضافه به علاقه مندی</div>
+        </div>
+        <div class="share-container">
+          <img src="images/share.png">
+          <div class="icon-hover-2">اشتراک گذاری</div>
+        </div>
+        <div class="notification-container">
+          <img src="images/notification.png">
+          <div class="icon-hover-3">اطلاع رسانی</div>
+        </div>
+        <div class="chart-container">
+          <img id="chart-icon" src="images/chart.jpg">
+          <div class="icon-hover-4">نمودار قیمت</div>
+        </div>
+        <div class="comparision-container">
+          <img src="images/comparision.jpg">
+          <div class="icon-hover-5">مقایسه</div>
+        </div>
+        <div class="hamberger-container">
+          <img id="hamberger-icon" src="images/hamberger-menu.jpg">
+          <div class="icon-hover-6">اضافه به لیست</div>
+        </div>
       </div>
       <div><img class="product-image-1" src="${matchingItem.image}"></div>
     </div>
@@ -44,8 +62,10 @@ products2.forEach((matchingItem) => {
           <div class="product-particuler-3">
             <span>رنگ:</span>
             <span>${matchingItem.color}</span>
-            <div class="div-1"><img src="images/check-icon-white.png"></div>
-            <div class="div-hover">مشکی</div>
+            <div class="div-1">
+              <img src="images/check-icon-white.png">
+              <div class="div-hover">${matchingItem.color}</div>
+            </div>
           </div>
           <div class="product-particuler-4">
             <div><p class="bold-text">ویژگی ها</p></div>
@@ -143,7 +163,9 @@ addButton.addEventListener('click', () => {
 
 updateCartQuantity()
 
-document.querySelector('.div-1').style.backgroundColor = 'black';
+products2.forEach((matchingItem) => {
+  document.querySelector('.div-1').style.backgroundColor = `${matchingItem.colorEn}`;
+});
 
 const emptyHeart = document.getElementById("heart-icon")
 
