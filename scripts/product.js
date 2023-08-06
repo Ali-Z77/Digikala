@@ -163,9 +163,9 @@ addButton.addEventListener('click', () => {
 
 updateCartQuantity()
 
-products2.forEach((matchingItem) => {
-  document.querySelector('.div-1').style.backgroundColor = `${matchingItem.colorEn}`;
-});
+products2.forEach((item) => {
+  document.querySelector('.div-1').style.backgroundcolor = `${item.colorEn}`
+})
 
 const emptyHeart = document.getElementById("heart-icon")
 
@@ -176,6 +176,7 @@ emptyHeart.addEventListener('click', () => {
   blackHeart.style.display = 'block'
 });
 
+console.log(products2)
 
 
 

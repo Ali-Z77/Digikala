@@ -69,6 +69,7 @@ function addToProduct(productId) {
       comments: matchingItem.comments,
       questions: matchingItem.questions,
       color: matchingItem.color,
+      colorEn: matchingItem.colorEn,
       screenType: matchingItem.screenType,
       screenSize: matchingItem.screenSize,
       cameraResolution: matchingItem.cameraResolution,
@@ -109,3 +110,4 @@ document.querySelectorAll('.product-link').forEach((link) => {
 updateCartQuantity()
 
 
+console.log(products)
