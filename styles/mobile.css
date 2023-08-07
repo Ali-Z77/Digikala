@@ -135,6 +135,8 @@
     flex-direction: row;
     height: 220px;
     padding-top: 20px;
+    border-left: none;
+    border-right: none;
   }
   .product-container:hover {
     box-shadow: none;
