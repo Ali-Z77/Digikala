@@ -19,6 +19,36 @@
   width: 800%;
 }
 
+@media ( max-width: 1300px ) {
+  .slides {
+    height: 350px;
+  }
+}
+
+@media ( max-width: 1000px ) {
+  .slides {
+    height: 300px;
+  }
+}
+
+@media ( max-width: 800px ) {
+  .slides {
+    height: 250px;
+  }
+}
+
+@media ( max-width: 600px ) {
+  .slides {
+    height: 200px;
+  }
+}
+
+@media ( max-width: 400px ) {
+  .slides {
+    height: 150px;
+  }
+}
+
 .slides input {
   display: none;
 }
