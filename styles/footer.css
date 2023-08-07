@@ -18,6 +18,12 @@ footer {
   font-weight: 400;
 }
 
+@media (max-width: 800px) {
+  .digi-logo-label {
+    font-size: 12px;
+  }
+}
+
 .digi-logo-container {
   margin-right: 20px;
 }
@@ -26,6 +32,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .khadamat {
+    display: none;
+  }
 }
 
 .khadamat div {
@@ -83,10 +95,74 @@ footer {
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
+  transition: .1s;
+}
+
+.pov button:active {
+  background-color: rgb(179, 172, 172);
 }
 
 .pov p {
   color: gray;
   font-size: 15px;
+}
+
+.pov-2 {
+  display: flex;
+  column-gap: 100px;
+  margin-right: 10px;
+}
+
+@media (max-width: 1200px) {
+  .buy-guide {
+    display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .pov {
+    display: block;
+  }
+  .pov-2 h2 {
+    font-size: 14px;
+  }
+  .pov-2 p {
+    font-size: 12px;
+  }
+  .social-media-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+  }
+  .social-media img {
+    width: 40px;
+    margin-left: 10px;
+  }
+  .email-enter {
+    font-size: 14px;
+  }
+  .input-container {
+    display: flex;
+    column-gap: 10px;
+  }
+  .input-container input {
+    width: 100%;
+  }
+  .support-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .email-enter {
+    display: none;
+  }
+  .input-container {
+    margin-top: 20px;
+  }
+  .social-media img {
+    width: 35px;
+  }
 }
 
