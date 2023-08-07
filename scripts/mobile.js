@@ -109,5 +109,3 @@ document.querySelectorAll('.product-link').forEach((link) => {
 
 updateCartQuantity()
 
-
-console.log(products)
