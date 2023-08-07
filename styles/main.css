@@ -8,20 +8,31 @@
 
 .sugestions {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(8, 1fr);
   align-items: center;
   justify-content: center;
   margin-top: 40px;
 }
 
+@media (max-width: 1000px) {
+  .sugestions {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 50px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .sugestions {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+  }
+
+}
+
 .sugestions img {
   width: 55px;
   cursor: pointer;
-}
-
-.sugestions div {
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 .sugestions div {
@@ -33,25 +44,35 @@
 .sugestions div label {
   margin-top: 8px;
   color: rgb(110, 101, 101);
-  font-weight: 500;
+  font-weight: 400;
+  white-space: nowrap;
 }
 
 .ads {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
+  margin-top: 60px;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 15px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+@media (max-width: 1000px) {
+  .ads {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 20px;
+    margin-right: 20px;
+    row-gap: 15px;
+    
+  }
 }
 
 .ads img {
   width: 100%;
   border-radius: 17px;
   cursor: pointer;
-}
-
-.ads div {
-  margin-left: 15px;
-  margin-top: 40px;
-  width: 300px;
 }
 
 .dastebandi {
@@ -62,12 +83,52 @@
 
 .dastebandiha {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin-left: 180px;
-  margin-right: 180px;
-  column-gap: 40px;
+  grid-template-columns: repeat(6, 1fr);
   row-gap: 50px;
   margin-top: 60px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+@media (max-width: 1350px) {
+  .dastebandiha {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .image-container {
+    max-width: 155px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .dastebandiha {
+   grid-template-columns: repeat(4, 1fr);
+  }
+  .image-container {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 800px) {
+  .dastebandiha {
+   grid-template-columns: repeat(3, 1fr);
+  }
+  .image-container {
+    max-width: 110px;
+  }
+}
+
+@media (max-width: 550px) {
+  .dastebandiha {
+   grid-template-columns: repeat(2, 1fr);
+  }
+  .image-container {
+    max-width: 90px;
+  }
+}
+
+.image-container {
+  width: 170px;
 }
 
 .dastebandiha img {
@@ -80,4 +141,10 @@
   flex-direction: column;
   align-items: center;
   font-size: 14px;
+  white-space: nowrap;
+}
+
+.dastebandiha a {
+  text-decoration: none;
+  color: black;
 }
