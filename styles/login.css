@@ -15,8 +15,54 @@ body {
   border: 1px solid rgb(237, 228, 228);
   border-radius: 10px;
   margin: auto;
-  margin-top: 140px;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    border: none;
+    width: auto;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .input-container input {
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-sizing: border-box;
+    outline: none;
+    border-bottom: 2px solid rgb(218, 15, 15);
+    background-color: rgb(245, 247, 248);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .input-container input:focus {
+    border-bottom:2px solid rgb(218, 15, 15);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .input-container p {
+    margin-right: 10px;
+  }
+  .button-container button {
+    width: 100%;
+    margin-right: 10px;
+  }
+  .button-container p {
+    margin-right: 10px;
+  }
+  .enter-container p {
+    margin-right: 10px;
+  }
+}
+
 
 .digi-logo {
   margin-top: 20px;

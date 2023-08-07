@@ -7,6 +7,8 @@ nav {
   flex-direction: row;
   position: relative;
   justify-content: space-between;
+  box-sizing: border-box;
+  outline: none;
 }
 
 nav div {
@@ -15,6 +17,8 @@ nav div {
   color: rgb(94, 91, 91);
   position: relative;
   white-space: nowrap;
+  box-sizing: border-box;
+  outline: none;
 }
 
 nav div::after {
