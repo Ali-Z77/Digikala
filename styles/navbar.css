@@ -1,7 +1,6 @@
 nav {
   display: flex;
   font-size: 13px;
-  margin-top: 80px;
   align-items: center;
   border-bottom: 2px solid rgb(210, 210, 210);
   flex-direction: row;
@@ -52,10 +51,18 @@ nav div a {
   border-left: 1px solid rgb(220, 204, 204);
   padding-left: 17px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .span2 {
   margin-right: 7px;
+}
+
+.hamberger {
+  width: 17px;
+  height: 20px;
 }
 
 .city-div {
