@@ -125,21 +125,19 @@ body {
 @media (max-width: 1030px) {
   .search-bar-container {
     margin-right: 15px;
-    width: 650px;
+    width: 100%;
   }
   .digikala-logo {
     display: none;
   }
   .top-header {
-    position: relative;
     border-bottom: 1px solid rgb(243, 236, 236);
   }
   .bottom-header {
-    position: relative;
     padding-bottom: 10px;
     border-bottom: 1px solid rgb(243, 236, 236);
-    column-gap: 40px;
-    width: auto;
+    column-gap: 35px;
+    grid-template-columns: 1fr 122px;
   }
   .login-container {
     border: none;
@@ -171,17 +169,6 @@ body {
   }
 }
 
-@media (max-width: 842px) {
-  .search-bar-container {
-    width: 400px;
-  }
-}
-
-@media (max-width: 595px) {
-  .search-bar-container {
-    width: 250px;
-  }
-}
 input[type="text"]:focus {
   outline: none;
   background-color: white;
@@ -222,7 +209,7 @@ input[type="text"]:focus {
   align-items: center;
   justify-content: space-between;
   z-index: 2;
-  padding: 10px 25px 15px 10px;
+  padding: 10px 20px 10px 15px;
 }
 
 .bottom-header {
