@@ -20,7 +20,6 @@ carts.forEach((cartItem) => {
         <div class="cart-right-section">
           <div class="product-title">
             <p>سبد خرید شما</p>
-            <div>۱ کالا</div>
           </div>
           <div class="product">
             <div>
