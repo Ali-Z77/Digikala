@@ -116,13 +116,13 @@ body {
   padding-bottom: 5px;
 }
 
-@media (min-width: 1030px) {
+@media (min-width: 1024px) {
   .top-header {
     display: none;
   }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1024px) {
   .search-bar-container {
     margin-right: 15px;
     width: 100%;

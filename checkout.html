@@ -88,7 +88,7 @@
             </div>
             <div>
               <img id="garantee-icon" src="images/garantee.png">
-              <span>گارانتی 18 ماهه اسمارت تکنولوژی قشمگارانتی 18 ماهه اسمارت تکنولوژی قشم</span>
+              <span class="garantee">گارانتی 18 ماهه اسمارت تکنولوژی قشمگارانتی 18 ماهه اسمارت تکنولوژی قشم</span>
             </div>
             <div>
               <img src="images/house-icon.png">
@@ -129,13 +129,15 @@
       <div class="total-checkout">
         <div class="products-price">
           <span>قیمت کالاها (1)</span>
-          <span>15,999,000</span>
+          <span class="total-price-number">15,999,000 <span class="tooman">تومان</span></span>
         </div>
         <div class="total-price">
-          <span>جمع سبد خرید</span>
-          <span class="total-price-number">15,999,000</span>
+          <span class="total-price-span">جمع سبد خرید</span>
+          <span class="total-price-number">15,999,000 <span class="tooman">تومان</span></span>
         </div>
-        <button>ثبت سفارش</button>
+        <div class="entry-button">
+          <button>ثبت سفارش</button>
+        </div>
       </div>
     </div>
   </div>
@@ -145,47 +147,63 @@
       <label class="digi-logo-label">تلفن پشتیبانی ۶۱۹۳۰۰۰۰ - ۰۲۱</label><label class="digi-logo-label">|</label><label class="digi-logo-label">۷ روز هفته، ۲۴ ساعته پاسخگوی شما هستیم</label>
     </div>
     <div class="khadamat">
-      <div><img src="images/cash-on-delivery.svg"><label>امکان تحویل اکسپرس</label></div>
-      <div><img src="images/express-delivery.svg"><label>امکان پرداخت در محل</label></div>
-      <div><img src="images/days-return.svg"><label>7 روز هفته، 24 ساعته</label></div>
-      <div><img src="images/original-products.svg"><label>هفت روز ضمانت بازگشت کالا</label></div>
-      <div><img src="images/support.svg"><label>ضمانت اصل بودن کالا</label></div>
+      <div>
+        <img src="images/cash-on-delivery.svg"><label>امکان تحویل اکسپرس</label>
+      </div>
+      <div>
+        <img src="images/express-delivery.svg"><label>امکان پرداخت در محل</label>
+      </div>
+      <div>
+        <img src="images/days-return.svg"><label>7 روز هفته، 24 ساعته</label>
+      </div>
+      <div>
+        <img src="images/original-products.svg"><label>هفت روز ضمانت بازگشت کالا</label>
+      </div>
+      <div>
+        <img src="images/support.svg"><label>ضمانت اصل بودن کالا</label>
+      </div>
     </div>
     <div class="pov">
-      <div>
-        <h2>با دیجی کالا</h2>
-        <p>اتاق خبر دیجی کالا</p>
-        <p>فروش در دیجی کالا</p>
-        <p>فرصت های شغلی</p>
-        <p>گزارش تخلف در دیجی کالا</p>
-        <p>تماس با دیجی کالا</p>
-        <p>درباره دیجی کالا</p>
+      <div class="pov-2">
+        <div>
+          <h2>با دیجی کالا</h2>
+          <p>اتاق خبر دیجی کالا</p>
+          <p>فروش در دیجی کالا</p>
+          <p>فرصت های شغلی</p>
+          <p>گزارش تخلف در دیجی کالا</p>
+          <p>تماس با دیجی کالا</p>
+          <p>درباره دیجی کالا</p>
+        </div>
+        <div>
+          <h2>خدمات مشتریان</h2>
+          <p>پاسخ به پرسش های متداول</p>
+          <p>رویه های بازگرداندن کالا</p>
+          <p>شرایط استفاده</p>
+          <p>حریم خصوصی</p>
+          <p>گزارش باگ</p>
+        </div>
       </div>
-      <div>
-        <h2>خدمات مشتریان</h2>
-        <p>پاسخ به پرسش های متداول</p>
-        <p>رویه های بازگرداندن کالا</p>
-        <p>شرایط استفاده</p>
-        <p>حریم خصوصی</p>
-        <p>گزارش باگ</p>
-      </div>
-      <div>
+      <div class="buy-guide">
         <h2>راهنمای خرید از دیجی کالا</h2>
         <p>نحوه ی ثبت سفارش</p>
         <p>رویه ارسال سفارش</p>
         <p>شیوه های پرداخت</p>
       </div>
       <div>
-        <h2>همراه ما باشید</h2>
-        <div class="social-media">
-          <img src="images/insta.png">
-          <img src="images/twitter.png">
-          <img src="images/linkedin.png">
-          <img src="images/aparat.png">
+        <div class="social-media-container">
+          <h2>همراه ما باشید</h2>
+          <div class="social-media">
+            <img src="images/insta.png">
+            <img src="images/twitter.png">
+            <img src="images/linkedin.png">
+            <img src="images/aparat.png">
+          </div>
         </div>
-        <h2>با ثبت ایمیل، از جدیدترین تخفیف ها با خبر شوید</h2>
-        <input type="text" placeholder="ایمیل شما">
-        <button>ثبت</button>
+        <h2 class="email-enter">با ثبت ایمیل، از جدیدترین تخفیف ها با خبر شوید</h2>
+        <div class="input-container">
+          <input type="text" placeholder="ایمیل شما">
+          <button>ثبت</button>
+        </div>
       </div>
     </div>
   </footer>

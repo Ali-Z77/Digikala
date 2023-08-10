@@ -32,7 +32,7 @@ carts.forEach((cartItem) => {
               </div>
               <div>
                 <img id="garantee-icon" src="images/garantee.png">
-                <span>گارانتی 18 ماهه اسمارت تکنولوژی قشمگارانتی 18 ماهه اسمارت تکنولوژی قشم</span>
+                <span class="garantee">گارانتی 18 ماهه اسمارت تکنولوژی قشم</span>
               </div>
               <div>
                 <img src="images/house-icon.png">
@@ -64,7 +64,7 @@ carts.forEach((cartItem) => {
               </div>
             </div>
             <div class="price">
-              <span>${matching.price}</span>
+              <span>${matching.price} <span class="tooman">تومان</span></span>
             </div>
           </div>
         </div>
