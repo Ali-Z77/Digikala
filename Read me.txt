@@ -1,0 +1,3 @@
+in this project i use module so open it with liveserver.
+
+to go to the products page click on the mobile part in the middle of the page.

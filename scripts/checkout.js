@@ -90,7 +90,7 @@ if (carts.length === 0) {
   document.querySelector('.total-container').style.display = 'none';
 }
 
-export function removeCartQuantity() {
+function removeCartQuantity() {
   const cartQuantity = Number(document.querySelector('.cart-quantity').innerText);
 
   const cartQuantityContainer = document.querySelector('.checkout-number-container');

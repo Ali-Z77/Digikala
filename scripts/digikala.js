@@ -12,3 +12,15 @@ function updateCartQuantity() {
 }
 
 updateCartQuantity()
+
+function removeCartQuantity() {
+  const cartQuantity = Number(document.querySelector('.cart-quantity').innerText);
+
+  const cartQuantityContainer = document.querySelector('.checkout-number-container');
+
+  if (cartQuantity === 0) {
+    cartQuantityContainer.style.display = 'none';
+  };
+}
+
+removeCartQuantity()

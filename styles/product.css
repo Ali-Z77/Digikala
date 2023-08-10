@@ -154,6 +154,9 @@
   .sailer-card .sailer-7 #price-number {
     font-size: 15px;
   }
+  .sailer-card .sailer-7 .in-youre-cart-container {
+    display: none;
+  }
 }
 
 .product-image {
