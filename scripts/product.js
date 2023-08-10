@@ -98,7 +98,7 @@ products2.forEach((matchingItem) => {
             <p>گارانتی ۱۸ ماهه دیجی کالا سرویس</p>
           </div>
           <div class="sailer-5">
-            <div><span class="exist">موجود در انبار دیجی‌کالا</span><img src="images/lesser-than.png"></div>
+            <div class="exist-container"><span class="exist">موجود در انبار دیجی‌کالا</span><img class="lesser-than-icon" src="images/lesser-than.png"></div>
             <div><img src="images/red-truck.png"><span class="sending">ارسال دیجی‌کالا</span></div>
             <div><img src="images/fast-emission.png"><span class="sending">ارسال فوری (شهر تهران)</span></div>
           </div>
@@ -119,8 +119,10 @@ products2.forEach((matchingItem) => {
                 <a id="visit-cart" href="checkout.html"><span>سبد خرید</span></a>
               </span>
               </div>
-            </div>  
-            <button class="js-add-to-cart-button" data-product-id="${matchingItem.productId}">افزودن به سبد</button>
+            </div> 
+            <div class="button-container">
+              <button class="js-add-to-cart-button" data-product-id="${matchingItem.productId}">افزودن به سبد خرید</button>
+            </div> 
           </div>
         </div>
       </div>

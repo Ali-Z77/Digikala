@@ -33,6 +33,129 @@
   justify-content: space-around;
 }
 
+@media (max-width: 1024px) {
+  .current-left {
+    display: none;
+  }
+  .main-container .product-container {
+    flex-direction: column;
+  }
+  .product-container .product-image {
+    width: 100%;
+    flex-direction: column;
+  }
+  .product-container .product-image .product-icons {
+    flex-direction: row;
+    justify-content: end;
+    column-gap: 25px;
+  }
+  .icon-hover,
+  .icon-hover-2,
+  .icon-hover-3,
+  .icon-hover-4,
+  .icon-hover-5,
+  .icon-hover-6 {
+    display: none;
+}
+  .product-container .product-image-1:hover {
+    transform: scale(1);
+  }
+  .product-particuler-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .sailer-particuler {
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  .sailer-particuler .sailer-card {
+    width: 100%;
+    border: none;
+    background-color: white;
+  }
+  .sailer-particuler .sailer-card div {
+    padding-right: unset;
+  }
+  .sailer-card .sailer-span-1 {
+    padding-right: 10px;
+  }
+  .title img {
+    display: none;
+  }
+  .title {
+    margin-right: 20px;
+  }
+  .title .title-text {
+    padding: unset;
+  }
+  .title .title-text span {
+    font-size: 13px;
+
+  }
+  .title .title-text p {
+    font-size: 16px;
+  }
+  .product-particuler-container .product-particuler-1 {
+    display: none;
+  }
+  .product-particuler-2 span {
+    font-size: 12px;
+  }
+  .product-particuler-container .product-particuler-3 span {
+    font-size: 14px;
+  }
+  .product-particuler-container .product-particuler-4 span {
+    font-size: 12px;
+  }
+  .product-particuler-container .product-particuler-4 p {
+    font-size: 13px;
+  }
+  .sailer-card .sailer-2 span {
+    font-size: 15px;
+  }
+  .sailer-card .sailer-2 img {
+    width: 20px;
+  }
+  .sailer-card .sailer-3 span {
+    font-size: 11px;
+  }
+  .sailer-card .sailer-4 p {
+    font-size: 13px;
+  }
+  .sailer-card .sailer-4 img {
+    width: 15px;
+  }
+  .sailer-card .sailer-5 .exist {
+    font-size: 13px;
+  }
+  .sailer-card .sailer-7 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: row;
+    direction: ltr;
+    column-gap: 130px;
+  }
+  .sailer-card .sailer-7 .price {
+    direction: rtl;
+    margin: unset;
+    margin-left: 20px;
+  }
+  .sailer-card .sailer-7 .button-container {
+    width: 100%;
+    margin-right: 20px;
+  }
+  .sailer-card .sailer-7 .js-add-to-cart-button {
+    width: 100%;
+  }
+  .sailer-card .sailer-7 #price-number {
+    font-size: 15px;
+  }
+}
+
 .product-image {
   width: 500px;
   margin-top: 50px;
@@ -124,26 +247,30 @@
 }
 
 .title-text {
-  line-height: 40px;
+  line-height: 35px;
   padding-right: 10px;
 }
 
 .title-text span {
   margin-left: 10px;
   font-size: 15px;
-  color: rgb(137, 191, 209);
+  color: rgb(118, 223, 255);
   cursor: pointer;
+  font-weight: 600;
 }
 
 .title-text p {
   font-size: 21px;
+  white-space: wrap;
+  font-weight: 600;
+  margin-top: 0;
 }
 
 .product-particuler-1 {
   display: flex;
   align-items: center;
   color: rgb(193, 184, 184);
-  white-space: nowrap;
+  white-space: wrap;
 }
 
 .product-particuler-2 {
@@ -179,6 +306,7 @@
 
 .product-particuler-3 span {
   font-size: 18px;
+  font-weight: 600;
 }
 
 .div-1 {
@@ -218,9 +346,9 @@
 }
 
 .product-particuler-4 span {
-  color: gray;
+  color: rgb(166, 160, 160);
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .product-particuler-4 p {
@@ -252,21 +380,19 @@
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
+  align-items: center;
 }
 
 .sailer-span-1 {
   padding-right: 20px;
-  font-size: 17px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .sailer-span-2 {
   font-size: 12px;
   color: rgb(139, 194, 212);
   padding-left: 20px;
-}
-
-.sailer-card img {
-  width: 50px;
 }
 
 .sailer-2 {
@@ -288,6 +414,7 @@
 
 .sailer-3 {
   display: flex;
+  align-items: center;
   padding-right: 58px;
   padding-bottom: 15px;
   margin-right: 7px;
@@ -317,7 +444,7 @@
 
 .sailer-4 img {
   width: 20px;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .sailer-4 {
@@ -328,6 +455,7 @@
   margin-right: 5px;
   padding-top: 7px;
   border-bottom: 1px solid rgb(210, 207, 207);
+  font-weight: 600;
 }
 
 .sailer-5 {
@@ -348,19 +476,29 @@
 }
 
 .sailer-5 img {
-  width: 20px;
+  width: 16px;
 }
 
-.exist {
+.sailer-5 .lesser-than-icon {
+  width: 11px;
+  margin-left: 20px;
+}
+
+.sailer-5 .exist {
   font-size: 16px;
-  margin-left: 90px;
   white-space: nowrap;
+  font-weight: 600;
 }
 
 .sending {
   font-size: 12px;
   font-weight: 400;
   color: gray;
+}
+
+.exist-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .sailer-6 img {
@@ -380,7 +518,8 @@
 
 .sailer-6 span {
   padding-left: 20px;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .sailer-7 {
@@ -398,11 +537,13 @@
 
 .price span {
   font-size: 10px;
+  font-weight: 600;
   padding-right: 5px;
 }
 
 #price-number {
   font-size: 18px;
+  font-weight: 600;
 }
 
 .js-add-to-cart-button {
