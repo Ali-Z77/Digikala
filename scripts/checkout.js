@@ -90,11 +90,15 @@ if (carts.length === 0) {
   document.querySelector('.total-container').style.display = 'none';
 }
 
-const cartQuantity = Number(document.querySelector('.cart-quantity').innerText);
+export function removeCartQuantity() {
+  const cartQuantity = Number(document.querySelector('.cart-quantity').innerText);
 
-const cartQuantityContainer = document.querySelector('.checkout-number-container');
+  const cartQuantityContainer = document.querySelector('.checkout-number-container');
 
-if (cartQuantity === 0) {
-  cartQuantityContainer.style.display = 'none';
-};
+  if (cartQuantity === 0) {
+    cartQuantityContainer.style.display = 'none';
+  };
+}
+
+removeCartQuantity()
 

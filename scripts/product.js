@@ -169,8 +169,6 @@ products2.forEach((item) => {
   colorEn.style.backgroundColor = `${item.colorEn}`
 });
 
-console.log(colorEn)
-
 const emptyHeart = document.getElementById("heart-icon")
 
 const blackHeart = document.getElementById("black-heart")
@@ -183,9 +181,7 @@ emptyHeart.addEventListener('click', () => {
 blackHeart.addEventListener('click', () => {
   emptyHeart.style.display = 'block';
   blackHeart.style.display = 'none';
-})
-
-
+});
 
 
 
