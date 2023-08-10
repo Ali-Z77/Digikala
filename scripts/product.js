@@ -185,7 +185,6 @@ blackHeart.addEventListener('click', () => {
   blackHeart.style.display = 'none';
 })
 
-console.log(products2)
 
 
 
