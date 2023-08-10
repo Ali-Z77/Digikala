@@ -85,9 +85,16 @@ document.querySelectorAll('.delete-button').forEach((button) => {
   });
 });
 
-const emptyCart = document.querySelector('.empty-cart')
-
 if (carts.length === 0) {
   document.querySelector('.empty-cart').style.display = 'block';
   document.querySelector('.total-container').style.display = 'none';
 }
+
+const cartQuantity = Number(document.querySelector('.cart-quantity').innerText);
+
+const cartQuantityContainer = document.querySelector('.checkout-number-container');
+
+if (cartQuantity === 0) {
+  cartQuantityContainer.style.display = 'none';
+};
+
