@@ -22,16 +22,15 @@
   .sugestions img {
     max-width: 45px;
   }
+  .sugestions div label {
+    font-size: 12px;
+  }
 
 }
 
 @media (max-width: 600px) {
-  .sugestions {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 50px;
-  }
   .sugestions div label {
-    font-size: 12px;
+    font-size: 10px;
   }
 
 }
