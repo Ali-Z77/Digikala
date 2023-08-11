@@ -18,7 +18,7 @@ export const products = [
     systemOperation: "Android 13",
     withItems: "دفترچه راهنما",
     sailer: "5 فروشنده دیگر",
-    price: "15,999,000",
+    price: 15999000,
   },
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c7",
@@ -39,7 +39,7 @@ export const products = [
     systemOperation: "Android 12",
     withItems: "دفترچه راهنما",
     sailer: "5 فروشنده دیگر",
-    price: "19,000,000",
+    price: 19000000,
   },
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c8",
@@ -60,7 +60,7 @@ export const products = [
     systemOperation: "Android 13",
     withItems: "دفترچه راهنما",
     sailer: "5 فروشنده دیگر",
-    price: "5,590,000",
+    price: 5590000,
   },
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c9",
@@ -81,7 +81,7 @@ export const products = [
     systemOperation: "Android 13",
     withItems: "دفترچه راهنما",
     sailer: "5 فروشنده دیگر",
-    price: "52,399,000",
+    price: 52399000,
   },
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c10",
@@ -102,7 +102,7 @@ export const products = [
     systemOperation: "Android 13",
     withItems: "دفترچه راهنما",
     sailer: "5 فروشنده دیگر",
-    price: "12,700,000",
+    price: 12700000,
   },
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c11",
@@ -123,7 +123,7 @@ export const products = [
     systemOperation: "Android 12",
     withItems: "دفترچه راهنما",
     sailer: "5 فروشنده دیگر",
-    price: "14,859,000",
+    price: 14859000,
   },
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c12",
@@ -144,7 +144,7 @@ export const products = [
     systemOperation: "Android 13",
     withItems: "دفترچه راهنما",
     sailer: "5 فروشنده دیگر",
-    price: "7,700,000",
+    price: 7700000,
   },
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c13",
@@ -165,7 +165,7 @@ export const products = [
     systemOperation: "Android 10",
     withItems: "دفترچه راهنما",
     sailer: "5 فروشنده دیگر",
-    price: "17,325,000",
+    price: 17325000,
   },
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c14",
@@ -186,7 +186,7 @@ export const products = [
     systemOperation: "Android 13",
     withItems: "دفترچه راهنما",
     sailer: "5 فروشنده دیگر",
-    price: "42,480,000",
+    price: 42480000,
   },
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c15",
@@ -207,7 +207,7 @@ export const products = [
     systemOperation: "Android 12",
     withItems: "دفترچه راهنما",
     sailer: "5 فروشنده دیگر",
-    price: "19,400,000",
+    price: 19400000,
   },
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c16",
@@ -228,7 +228,7 @@ export const products = [
     systemOperation: "Android 12",
     withItems: "دفترچه راهنما",
     sailer: "5 فروشنده دیگر",
-    price: "8,495,000",
+    price: 8495000,
   },
   {
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c17",
@@ -249,6 +249,6 @@ export const products = [
     systemOperation: "Android 11",
     withItems: "دفترچه راهنما",
     sailer: "5 فروشنده دیگر",
-    price: "43,380,000",
+    price: 43380000,
   }
 ];
