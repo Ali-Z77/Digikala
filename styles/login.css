@@ -33,21 +33,8 @@ body {
     width: 100%;
     margin-right: 10px;
     margin-left: 10px;
-    box-sizing: border-box;
-    outline: none;
-    border-bottom: 2px solid rgb(218, 15, 15);
-    background-color: rgb(245, 247, 248);
-    border-top: none;
-    border-left: none;
-    border-right: none;
   }
 
-  .input-container input:focus {
-    border-bottom:2px solid rgb(218, 15, 15);
-    border-top: none;
-    border-left: none;
-    border-right: none;
-  }
   .input-container p {
     margin-right: 10px;
   }
@@ -95,17 +82,22 @@ p {
 }
 
 input {
-  width: 345px;
+  width: 350px;
   margin-right: 32px;
-  height: 42px;
-  border: 1px solid rgb(242, 66, 95);
+  height: 48px;
+  border-bottom: 1px solid aqua;
   border-radius: 8px;
   margin-top: 8px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: rgb(245, 247, 248);
+  box-sizing: border-box;
+  outline: none;
 }
 
 input:focus {
   outline: none;
-  border: 1px solid rgb(242, 66, 95);
 }
 
 .alert {
@@ -113,7 +105,17 @@ input:focus {
   margin-right: 32px;
   color: rgb(228, 51, 80);
   margin-top: 0;
+  margin-top: 5px;
+  display: none;
+}
+
+.alert-2 {
+  font-size: 13px;
+  margin-right: 32px;
+  color: rgb(228, 51, 80);
+  margin-top: 0;
   margin-top: 2px;
+  display: none;
 }
 
 button {
