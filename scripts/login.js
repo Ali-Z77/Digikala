@@ -29,5 +29,6 @@ inputValue.addEventListener('textInput', () => {
   if (inputValue.value.length >= 11) {
     inputValue.style.borderBottom = '1px solid aqua';
     alertElement2.style.display = 'none';
+    btnLink.setAttribute('href', 'digikala.html');
   }
 })
