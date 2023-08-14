@@ -1,3 +1,15 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(217, 215, 215);
+}
+
 nav {
   display: flex;
   font-size: 13px;
@@ -35,7 +47,7 @@ nav div:hover::after {
   transform: scaleX(1);
 }
 
-nav div a {
+nav div {
   cursor: pointer;
 }
 
@@ -54,6 +66,83 @@ nav div a {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.first-nav ul {
+  list-style-type: none;
+  position: absolute;
+  background-color: white;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 5px;
+}
+
+.first-nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.first-nav .ul-1 {
+  top: 40px;
+  right: 1px;
+}
+
+.first-nav ul li {
+  padding: 20px;
+  transition: all .2s ease-in-out;
+}
+
+.first-nav:hover .ul-1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.first-nav ul li:hover {
+  background-color: rgb(243, 240, 240);
+  border-radius: 5px;
+}
+
+.ul-2,
+.ul-3 {
+  right: 185px;
+}
+
+.mobile-li:hover .ul-2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-li {
+  position: relative;
+}
+
+.digital-li:hover .ul-3 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.digital-li {
+  position: relative;
+}
+
+.arrow-icon::before {
+  content: '';
+  border-bottom: 2px solid black;
+  height: 7px;
+  display: block;
+  border-right: 2px solid black;
+  width: 7px;
+  position: absolute;
+  right: 90%;
+  top: 25px;
+  transform: rotate(45deg);
+  transition: .2s;
+}
+
+.arrow-icon:hover::before {
+  transform: rotate(222deg);
 }
 
 .span2 {
