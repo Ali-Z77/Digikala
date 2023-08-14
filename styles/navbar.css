@@ -85,7 +85,7 @@ nav div {
 }
 
 .first-nav .ul-1 {
-  top: 40px;
+  top: 30px;
   right: 1px;
 }
 
@@ -107,6 +107,7 @@ nav div {
 .ul-2,
 .ul-3 {
   right: 185px;
+  top: 20px;
 }
 
 .mobile-li:hover .ul-2 {

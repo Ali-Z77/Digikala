@@ -24,3 +24,21 @@ function removeCartQuantity() {
 }
 
 removeCartQuantity()
+
+const ul = document.querySelector('.ul-1-1');
+
+const hambergerIcon = document.querySelector('.hamberger');
+
+const xIcon = document.querySelector('.x-icon');
+
+hambergerIcon.addEventListener('click', () => {
+  ul.style.transform = 'translate(0)';
+  hambergerIcon.style.display = 'none';
+  xIcon.style.display = 'block';
+});
+
+xIcon.addEventListener('click', () => {
+  ul.style.transform = 'translate(350px)';
+  hambergerIcon.style.display = 'block';
+  xIcon.style.display = 'none';
+})

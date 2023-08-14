@@ -120,6 +120,9 @@ body {
   .top-header {
     display: none;
   }
+  .ul-1-1 {
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -167,6 +170,25 @@ body {
   .register {
     display: none;
   }
+  .ul-1-1 {
+    position: absolute;
+    background-color: white;
+    height: 400px;
+    top: 50px;
+    right: 0;
+    width: 250px;
+    z-index: 3;
+    padding: 0;
+    transform: translatex(350px);
+    transition: .2s;
+  }
+  .ul-1-1 li {
+    padding: 15px;
+    cursor: pointer;
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 600;
+  }
 }
 
 input[type="text"]:focus {
@@ -201,6 +223,12 @@ input[type="text"]:focus {
 }
 
 .hamberger {
+  cursor: pointer;
+}
+
+.x-icon {
+  width: 20px;
+  display: none;
   cursor: pointer;
 }
 
