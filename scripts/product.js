@@ -109,17 +109,21 @@ products2.forEach((matchingItem) => {
           </div>
           <div class="sailer-7">
             <div class="price">
-            <span id="price-number">${matchingItem.price}</span><span>تومان</span>
+              <div>
+                <span id="price-number">${matchingItem.price}</span><span> تومان</span>
+              </div> 
             </div>
-            <div class="in-youre-cart-container">
-              <div class="in-youre-cart">
-              <span>در سبد شما</span>
-              <span>
-                <span>مشاهده</span>
-                <a id="visit-cart" href="checkout.html"><span>سبد خرید</span></a>
-              </span>
+            <div class="main-delete">
+              <div class="delete-container">
+              <div id="red-plus" class="red-plus" data-product-id="${matchingItem.productId}">+</div>
+                <div class="product-number-container">
+                <span class="cart-quantity-2 js-cart-quantity-2">1</span>
+                <span>حداکثر</span>
               </div>
-            </div> 
+              <div>
+                <img class="delete-button" data-product-id="${matchingItem.productId}" src="images/red-recycle-bin-icon.jpg">
+              </div>
+            </div>
             <div class="button-container">
               <button class="js-add-to-cart-button" data-product-id="${matchingItem.productId}">افزودن به سبد خرید</button>
             </div> 
@@ -140,7 +144,9 @@ export function updateCartQuantity() {
     cartQuantity += cartItem.quantity;
   });
     
-  document.querySelector('.cart-quantity').innerHTML = cartQuantity
+  document.querySelector('.cart-quantity').innerHTML = cartQuantity;
+
+  document.querySelector('.js-cart-quantity-2').innerHTML = cartQuantity;
 
 }
 
@@ -152,18 +158,27 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
 
     updateCartQuantity();
 
+    document.querySelector('.js-add-to-cart-button').style.display = 'none';
+
+    document.querySelector('.delete-container').style.display = 'flex';
+
   });
 });
 
-const addButton = document.querySelector('.js-add-to-cart-button');
+document.querySelectorAll('.red-plus').forEach((button) => {
+  button.addEventListener('click', () => {
+    const productId = button.dataset.productId;
 
-const inYoureCart = document.querySelector('.in-youre-cart-container');
+    addToCart(productId);
 
-addButton.addEventListener('click', () => {
-  inYoureCart.style.display = 'flex';
+    updateCartQuantity();
+
+  });
 });
 
 updateCartQuantity()
+
+console.log(carts)
 
 let colorEn = document.querySelector('.div-1')
 

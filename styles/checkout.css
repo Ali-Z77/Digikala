@@ -208,10 +208,15 @@
   justify-content: space-around;
 }
 
-.price {
-  margin-right: 30px;
-  font-size: 15px;
-  font-weight: 600;
+#red-plus {
+  font-size: 25px;
+  color: rgb(231, 43, 68);
+  cursor: pointer;
+}
+
+.cart-quantity-2 {
+  color: rgb(231, 43, 68);
+  font-size: 14px;
 }
 
 .delete-container img {
@@ -226,18 +231,13 @@
   align-items: center;
   font-size: 11px;
   font-weight: 200;
-  color: rgb(204, 198, 198);
+  color: rgb(160, 152, 152);
 }
 
-.cart-quantity-2 {
-  color: rgb(231, 43, 68);
-  font-size: 14px;
-}
-
-#red-plus {
-  font-size: 25px;
-  color: rgb(231, 43, 68);
-  cursor: pointer;
+.price {
+  margin-right: 30px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .total-checkout button {

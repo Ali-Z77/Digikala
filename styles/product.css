@@ -157,6 +157,10 @@
   .sailer-card .sailer-7 .in-youre-cart {
     flex-direction: row;
   }
+  .delete-container {
+    margin-top: 10px;
+    direction: rtl;
+  }
 }
 
 .product-image {
@@ -538,14 +542,13 @@
   margin-top: 30px;
 }
 
-.price span {
-  font-size: 10px;
-  font-weight: 600;
-  padding-right: 5px;
-}
-
 #price-number {
   font-size: 18px;
+  font-weight: 600;
+}
+
+.price span {
+  font-size: 10px;
   font-weight: 600;
 }
 
@@ -568,27 +571,43 @@
   background-color: rgb(250, 102, 127);
 }
 
-#added-to-cart {
-  padding-right: 20px;
+.delete-container {
+  width: 100px;
+  height: 45px;
+  border: 1px solid rgb(204, 198, 198);
+  margin-right: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   display: none;
-  color: rgb(47, 90, 132);
+  margin-bottom: 20px;
 }
 
-.in-youre-cart {
+#red-plus {
+  font-size: 25px;
+  color: rgb(231, 43, 68);
+  cursor: pointer;
+}
+
+.cart-quantity-2 {
+  color: rgb(231, 43, 68);
+  font-size: 14px;
+}
+
+.delete-container img {
+  width: 16px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.product-number-container {
   display: flex;
   flex-direction: column;
-  font-size: 14px;
-  margin-right: 20px;
-  line-height: 30px;
-}
-
-.in-youre-cart-container {
-  display: none;
-}
-
-#visit-cart {
-  color: rgb(58, 141, 168);
-  text-decoration: none;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 200;
+  color: rgb(152, 146, 146);
 }
 
 

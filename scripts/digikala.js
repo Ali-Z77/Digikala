@@ -25,6 +25,8 @@ function removeCartQuantity() {
 
 removeCartQuantity()
 
+/*make mobile menu intractive*/
+
 const ul = document.querySelector('.ul-1-1');
 
 const hambergerIcon = document.querySelector('.hamberger');
