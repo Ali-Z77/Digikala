@@ -56,7 +56,7 @@ carts.forEach((cartItem) => {
             <div class="delete-container">
               <div id="red-plus">+</div>
               <div class="product-number-container">
-                <span class="cart-quantity-2 js-cart-quantity-2-${matching.productId}">${cartItem.quantity}</span>
+                <span class="cart-quantity-2 js-cart-quantity-2">${cartItem.quantity}</span>
                 <span>حداکثر</span>
               </div>
               <div>
@@ -64,7 +64,7 @@ carts.forEach((cartItem) => {
               </div>
             </div>
             <div class="price">
-              <span class="price-number js-price-number-${matching.productId}">${matching.price}</span> <span class="tooman">تومان</span>
+              <span class="price-number js-price-number">${matching.price}</span> <span class="tooman">تومان</span>
             </div>
           </div>
         </div>
@@ -101,3 +101,22 @@ function removeCartQuantity() {
 }
 
 removeCartQuantity();
+
+const price = Number(document.querySelector('.js-price-number').innerText);
+
+const quantity = Number(document.querySelector('.js-cart-quantity-2').innerText);
+
+let total = 0;
+
+let totalQuantity = 0;
+
+carts.forEach(() => {
+  total += (price * quantity);
+  totalQuantity += quantity;
+})
+
+document.querySelector('.total-price-number-2').innerHTML = total;
+
+document.querySelector('.total-price-number').innerHTML = total;
+
+document.querySelector('.total-quantity').innerHTML = totalQuantity;
