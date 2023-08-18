@@ -83,6 +83,8 @@ function addToProduct(productId) {
   }
 }
 
+console.log(products2)
+
 function updateCartQuantity() {
   let cartQuantity = 0;
 

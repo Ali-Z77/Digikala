@@ -1,4 +1,4 @@
-import { carts, removeFromCart } from "../data/carts.js";
+import { carts, removeFromCart, } from "../data/carts.js";
 import { products } from "../data/products.js";
 
 let checkoutHtml = '';
@@ -54,7 +54,7 @@ carts.forEach((cartItem) => {
           </div>
           <div class="delete-price">
             <div class="delete-container">
-              <div id="red-plus">+</div>
+              <div id="red-plus" class="red-plus">+</div>
               <div class="product-number-container">
                 <span class="cart-quantity-2 js-cart-quantity-2">${cartItem.quantity}</span>
                 <span>حداکثر</span>
@@ -82,6 +82,13 @@ document.querySelectorAll('.delete-button').forEach((button) => {
 
     const container = document.querySelector(`.js-right-section-${productId}`)
     container.remove();
+
+    updateCartQuantity();
+    
+    if (carts.length === 0) {
+      document.querySelector('.empty-cart').style.display = 'block';
+      document.querySelector('.total-container').style.display = 'none';
+    }
   });
 });
 
@@ -90,33 +97,52 @@ if (carts.length === 0) {
   document.querySelector('.total-container').style.display = 'none';
 }
 
-function removeCartQuantity() {
-  const cartQuantity = Number(document.querySelector('.cart-quantity').innerText);
 
-  const cartQuantityContainer = document.querySelector('.checkout-number-container');
 
-  if (cartQuantity === 0) {
-    cartQuantityContainer.style.display = 'none';
-  };
-}
 
-removeCartQuantity();
+const cartQuantityContainer = document.querySelector('.checkout-number-container');
 
-const price = Number(document.querySelector('.js-price-number').innerText);
+if (carts.length === 0) {
+  cartQuantityContainer.style.display = 'none';
+};
 
-const quantity = Number(document.querySelector('.js-cart-quantity-2').innerText);
+const totalCheckout = document.querySelector('.total-container');
 
 let total = 0;
 
 let totalQuantity = 0;
 
-carts.forEach(() => {
-  total += (price * quantity);
-  totalQuantity += quantity;
-})
+carts.forEach((item) => {
+  const productId = item.productId;
 
-document.querySelector('.total-price-number-2').innerHTML = total;
+  let matching;
 
-document.querySelector('.total-price-number').innerHTML = total;
+  products.forEach((product) => {
+    if (product.productId === productId) {
+      matching = product;
+    }
+  });
+  total += matching.price * item.quantity;
+  totalQuantity += item.quantity;
+});
 
-document.querySelector('.total-quantity').innerHTML = totalQuantity;
+totalCheckout.innerHTML = `
+  <div class="total-checkout">
+    <div class="products-price">
+      <div>
+        <span>قیمت کالاها </span><span class="total-quantity">${totalQuantity}</span>
+      </div>
+      <div>
+        <span class="total-price-number"></span>${total} <span class="tooman">تومان</span>
+      </div>
+    </div>
+    <div class="total-price">
+      <span class="total-price-span">جمع سبد خرید</span>
+      <div>
+        <span class="total-price-number-2"></span>${total} <span class="tooman">تومان</span>
+      </div>
+    </div>
+    <div class="entry-button">
+      <button>ثبت سفارش</button>
+    </div>
+  </div>`;

@@ -1,7 +1,7 @@
 
 import {carts, addToCart} from "../data/carts.js";
 import { products2 } from "../data/products2.js";
-
+console.log(products2)
 let productHtml = ''
 
 products2.forEach((matchingItem) => {
