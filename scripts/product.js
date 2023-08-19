@@ -1,7 +1,7 @@
 
 import {carts, addToCart, removeFromCart} from "../data/carts.js";
 import { products2 } from "../data/products2.js";
-console.log(products2)
+
 let productHtml = ''
 
 products2.forEach((matchingItem) => {
@@ -145,16 +145,6 @@ export function updateCartQuantity() {
   });
     
   document.querySelector('.cart-quantity').innerHTML = cartQuantity;
-
-  document.querySelector('.js-cart-quantity-2').innerHTML = cartQuantity;
-
-}
-
-if (document.querySelector('.cart-quantity').innerText >= 1) {
-  
-  document.querySelector('.js-add-to-cart-button').style.display = 'none';
-
-  document.querySelector('.delete-container').style.display = 'flex';
 }
 
 document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {

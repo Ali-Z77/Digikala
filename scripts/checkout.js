@@ -75,6 +75,8 @@ carts.forEach((cartItem) => {
 
 document.querySelector('.right-section-container').innerHTML = checkoutHtml;
 
+priceCalculate();
+
 function updateCartQuantity() {
   let cartQuantity = 0;
 
@@ -83,8 +85,6 @@ function updateCartQuantity() {
   });
     
   document.querySelector('.cart-quantity').innerHTML = cartQuantity;
-
-  document.querySelector('.js-cart-quantity-2').innerHTML = cartQuantity;
 
 }
 
@@ -95,9 +95,14 @@ document.querySelectorAll('.delete-button').forEach((button) => {
 
     document.querySelector(`.js-right-section-${productId}`).remove();
 
-    document.querySelector('.empty-cart').style.display = 'block';
-    
-    document.querySelector('.total-container').style.display = 'none';
+    priceCalculate()
+
+    if (carts.length === 0) {
+      
+      document.querySelector('.empty-cart').style.display = 'block';
+      
+      document.querySelector('.total-container').style.display = 'none';
+    }
 
     const cartQuantityContainer = document.querySelector('.checkout-number-container');
 
@@ -118,6 +123,8 @@ document.querySelectorAll('.red-plus').forEach((button) => {
 
     updateCartQuantity();
 
+    priceCalculate()
+
   });
 });
 
@@ -132,43 +139,46 @@ if (carts.length === 0) {
   cartQuantityContainer.style.display = 'none';
 };
 
-const totalCheckout = document.querySelector('.total-container');
+function priceCalculate() {
 
-let total = 0;
+  const totalCheckout = document.querySelector('.total-container');
 
-let totalQuantity = 0;
+  let total = 0;
 
-carts.forEach((item) => {
-  const productId = item.productId;
+  let totalQuantity = 0;
 
-  let matching;
+  carts.forEach((item) => {
+    const productId = item.productId;
 
-  products.forEach((product) => {
-    if (product.productId === productId) {
-      matching = product;
-    }
+    let matching;
+
+    products.forEach((product) => {
+      if (product.productId === productId) {
+        matching = product;
+      }
+    });
+    total += matching.price * item.quantity;
+    totalQuantity += item.quantity;
   });
-  total += matching.price * item.quantity;
-  totalQuantity += item.quantity;
-});
 
-totalCheckout.innerHTML = `
-  <div class="total-checkout">
-    <div class="products-price">
-      <div>
-        <span>قیمت کالاها </span><span class="total-quantity">${totalQuantity}</span>
+  totalCheckout.innerHTML = `
+    <div class="total-checkout">
+      <div class="products-price">
+        <div>
+          <span>قیمت کالاها </span><span class="total-quantity">${totalQuantity}</span>
+        </div>
+        <div>
+          <span class="total-price-number"></span>${total} <span class="tooman">تومان</span>
+        </div>
       </div>
-      <div>
-        <span class="total-price-number"></span>${total} <span class="tooman">تومان</span>
+      <div class="total-price">
+        <span class="total-price-span">جمع سبد خرید</span>
+        <div>
+          <span class="total-price-number-2"></span>${total} <span class="tooman">تومان</span>
+        </div>
       </div>
-    </div>
-    <div class="total-price">
-      <span class="total-price-span">جمع سبد خرید</span>
-      <div>
-        <span class="total-price-number-2"></span>${total} <span class="tooman">تومان</span>
+      <div class="entry-button">
+        <button>ثبت سفارش</button>
       </div>
-    </div>
-    <div class="entry-button">
-      <button>ثبت سفارش</button>
-    </div>
-  </div>`;
+    </div>`;
+};

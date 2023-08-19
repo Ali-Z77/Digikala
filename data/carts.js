@@ -19,7 +19,11 @@ export function addToCart(productId) {
     }
   });
   if (matchingItem) {
+
     matchingItem.quantity += 1;
+    
+    document.querySelector('.js-cart-quantity-2').innerHTML = matchingItem.quantity;
+
   } else {
     carts.push({
       productId: productId,
