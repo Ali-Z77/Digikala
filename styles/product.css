@@ -137,28 +137,23 @@
     background-color: white;
     flex-direction: row;
     direction: ltr;
-    column-gap: 130px;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    column-gap: 100px;
   }
   .sailer-card .sailer-7 .price {
     direction: rtl;
     margin: unset;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .sailer-card .sailer-7 .button-container {
-    width: 100%;
     margin-right: 20px;
   }
   .sailer-card .sailer-7 .js-add-to-cart-button {
     width: 100%;
   }
-  .sailer-card .sailer-7 #price-number {
-    font-size: 15px;
-  }
-  .sailer-card .sailer-7 .in-youre-cart {
-    flex-direction: row;
-  }
   .delete-container {
-    margin-top: 10px;
+    margin-top: 15px;
     direction: rtl;
   }
 }
@@ -555,7 +550,7 @@
 .js-add-to-cart-button {
   width: 310px;
   margin-right: 10px;
-  height: 40px;
+  height: 45px;
   background-color: rgb(241, 40, 74);
   border: none;
   border-radius: 10px;
@@ -582,6 +577,7 @@
   justify-content: space-around;
   display: none;
   margin-bottom: 20px;
+  box-shadow: 1px 1px 5px 1px rgb(204, 202, 202);;
 }
 
 #red-plus {
