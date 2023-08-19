@@ -1,4 +1,4 @@
-import { carts, removeFromCart, updateCartQuantity } from "../data/carts.js";
+import { carts, removeFromCart, addToCart } from "../data/carts.js";
 import { products } from "../data/products.js";
 
 let checkoutHtml = '';
@@ -54,7 +54,7 @@ carts.forEach((cartItem) => {
           </div>
           <div class="delete-price">
             <div class="delete-container">
-              <div id="red-plus" class="red-plus">+</div>
+              <div id="red-plus" class="red-plus" data-product-id="${matching.productId}">+</div>
               <div class="product-number-container">
                 <span class="cart-quantity-2 js-cart-quantity-2">${cartItem.quantity}</span>
                 <span>حداکثر</span>
@@ -75,6 +75,19 @@ carts.forEach((cartItem) => {
 
 document.querySelector('.right-section-container').innerHTML = checkoutHtml;
 
+function updateCartQuantity() {
+  let cartQuantity = 0;
+
+  carts.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+    
+  document.querySelector('.cart-quantity').innerHTML = cartQuantity;
+
+  document.querySelector('.js-cart-quantity-2').innerHTML = cartQuantity;
+
+}
+
 document.querySelectorAll('.delete-button').forEach((button) => {
   button.addEventListener('click', () => {
     const productId = button.dataset.productId;
@@ -94,6 +107,17 @@ document.querySelectorAll('.delete-button').forEach((button) => {
 
     updateCartQuantity();
     
+  });
+});
+
+document.querySelectorAll('.red-plus').forEach((button) => {
+  button.addEventListener('click', () => {
+    const productId = button.dataset.productId;
+
+    addToCart(productId);
+
+    updateCartQuantity();
+
   });
 });
 
