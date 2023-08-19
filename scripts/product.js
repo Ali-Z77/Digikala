@@ -1,6 +1,9 @@
 
 import {carts, addToCart, removeFromCart} from "../data/carts.js";
 import { products2 } from "../data/products2.js";
+import { openMenu } from "./digikala.js";
+
+openMenu();
 
 let productHtml = ''
 

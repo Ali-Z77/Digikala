@@ -1,6 +1,9 @@
 import {products2} from "../data/products2.js";
 import {products} from "../data/products.js";
 import { carts } from "../data/carts.js";
+import { openMenu } from "./digikala.js";
+
+openMenu();
 
 let mobileHtml = '';
 

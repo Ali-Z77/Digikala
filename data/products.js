@@ -26,7 +26,7 @@ export const products = [
     title: "گوشی موبایل سامسونگ",
     brand: "images/samsung.jpg",
     name: "گوشی موبایل سامسونگ مدل Galaxy S21 FE 5G دو سیم‌ کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
-    nameEn:"Samsung Galaxy S21 FE 5G Dual SIM 256GB And 8GB RAM Mobile Phone",
+    nameEn:"Samsung Galaxy S21 FE 5G Dual SIM 256GB And 8GB RAM Mobile Phone------------",
     starNumber: "4.2",
     starVote: "(2883)",
     comments: "3296 دیدگاه",

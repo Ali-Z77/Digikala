@@ -1,5 +1,8 @@
 import { carts, removeFromCart, addToCart } from "../data/carts.js";
 import { products } from "../data/products.js";
+import { openMenu } from "./digikala.js";
+
+openMenu();
 
 let checkoutHtml = '';
 

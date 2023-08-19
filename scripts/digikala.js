@@ -27,20 +27,25 @@ removeCartQuantity()
 
 /*make mobile menu intractive*/
 
-const ul = document.querySelector('.ul-1-1');
+export function openMenu() {
 
-const hambergerIcon = document.querySelector('.hamberger');
+  const ul = document.querySelector('.ul-1-1');
 
-const xIcon = document.querySelector('.x-icon');
+  const hambergerIcon = document.querySelector('.hamberger');
 
-hambergerIcon.addEventListener('click', () => {
-  ul.style.transform = 'translate(0)';
-  hambergerIcon.style.display = 'none';
-  xIcon.style.display = 'block';
-});
+  const xIcon = document.querySelector('.x-icon');
 
-xIcon.addEventListener('click', () => {
-  ul.style.transform = 'translate(350px)';
-  hambergerIcon.style.display = 'block';
-  xIcon.style.display = 'none';
-})
+  hambergerIcon.addEventListener('click', () => {
+    ul.style.transform = 'translate(0)';
+    hambergerIcon.style.display = 'none';
+    xIcon.style.display = 'block';
+  });
+
+  xIcon.addEventListener('click', () => {
+    ul.style.transform = 'translate(350px)';
+    hambergerIcon.style.display = 'block';
+    xIcon.style.display = 'none';
+  })
+}
+
+openMenu();
