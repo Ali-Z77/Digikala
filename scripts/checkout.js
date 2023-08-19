@@ -1,6 +1,6 @@
-import { carts, removeFromCart, addToCart } from "../data/carts.js";
+import { carts, removeFromCart, addToCart, updateCartQuantity } from "../data/carts.js";
 import { products } from "../data/products.js";
-import { openMenu } from "./digikala.js";
+import { openMenu, removeCartQuantity } from "./digikala.js";
 
 openMenu();
 
@@ -80,17 +80,6 @@ document.querySelector('.right-section-container').innerHTML = checkoutHtml;
 
 priceCalculate();
 
-function updateCartQuantity() {
-  let cartQuantity = 0;
-
-  carts.forEach((cartItem) => {
-    cartQuantity += cartItem.quantity;
-  });
-    
-  document.querySelector('.cart-quantity').innerHTML = cartQuantity;
-
-}
-
 document.querySelectorAll('.delete-button').forEach((button) => {
   button.addEventListener('click', () => {
     const productId = button.dataset.productId;
@@ -107,11 +96,7 @@ document.querySelectorAll('.delete-button').forEach((button) => {
       document.querySelector('.total-container').style.display = 'none';
     }
 
-    const cartQuantityContainer = document.querySelector('.checkout-number-container');
-
-    if (carts.length === 0) {
-      cartQuantityContainer.style.display = 'none';
-    };
+    removeCartQuantity();
 
     updateCartQuantity();
     
@@ -134,12 +119,6 @@ document.querySelectorAll('.red-plus').forEach((button) => {
 if (carts.length === 0) {
   document.querySelector('.empty-cart').style.display = 'block';
   document.querySelector('.total-container').style.display = 'none';
-}
-
-const cartQuantityContainer = document.querySelector('.checkout-number-container');
-
-if (carts.length === 0) {
-  cartQuantityContainer.style.display = 'none';
 };
 
 function priceCalculate() {

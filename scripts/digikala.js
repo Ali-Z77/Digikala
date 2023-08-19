@@ -7,23 +7,25 @@ function updateCartQuantity() {
     cartQuantity += cartItem.quantity;
   });
     
-  document.querySelector('.cart-quantity').innerHTML = cartQuantity
+  document.querySelector('.cart-quantity').innerHTML = cartQuantity;
 
 }
 
-updateCartQuantity()
+updateCartQuantity();
 
-function removeCartQuantity() {
-  const cartQuantity = Number(document.querySelector('.cart-quantity').innerText);
+/*if cart quantity is 0 then remove the style from shopping icon*/
 
+export function removeCartQuantity() {
   const cartQuantityContainer = document.querySelector('.checkout-number-container');
 
-  if (cartQuantity === 0) {
+  if (carts.length === 0) {
     cartQuantityContainer.style.display = 'none';
-  };
-}
+  } else {
+    cartQuantityContainer.style.display = 'flex';
+  }
+};
 
-removeCartQuantity()
+removeCartQuantity();
 
 /*make mobile menu intractive*/
 
