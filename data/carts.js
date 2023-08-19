@@ -42,7 +42,7 @@ export function removeFromCart(productId) {
 }
 
 
-function updateCartQuantity() {
+export function updateCartQuantity() {
   let cartQuantity = 0;
 
   carts.forEach((cartItem) => {

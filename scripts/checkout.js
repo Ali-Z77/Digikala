@@ -1,4 +1,4 @@
-import { carts, removeFromCart, } from "../data/carts.js";
+import { carts, removeFromCart, updateCartQuantity } from "../data/carts.js";
 import { products } from "../data/products.js";
 
 let checkoutHtml = '';
@@ -80,15 +80,20 @@ document.querySelectorAll('.delete-button').forEach((button) => {
     const productId = button.dataset.productId;
     removeFromCart(productId);
 
-    const container = document.querySelector(`.js-right-section-${productId}`)
-    container.remove();
+    document.querySelector(`.js-right-section-${productId}`).remove();
+
+    document.querySelector('.empty-cart').style.display = 'block';
+    
+    document.querySelector('.total-container').style.display = 'none';
+
+    const cartQuantityContainer = document.querySelector('.checkout-number-container');
+
+    if (carts.length === 0) {
+      cartQuantityContainer.style.display = 'none';
+    };
 
     updateCartQuantity();
     
-    if (carts.length === 0) {
-      document.querySelector('.empty-cart').style.display = 'block';
-      document.querySelector('.total-container').style.display = 'none';
-    }
   });
 });
 
@@ -96,9 +101,6 @@ if (carts.length === 0) {
   document.querySelector('.empty-cart').style.display = 'block';
   document.querySelector('.total-container').style.display = 'none';
 }
-
-
-
 
 const cartQuantityContainer = document.querySelector('.checkout-number-container');
 

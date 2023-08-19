@@ -1,5 +1,5 @@
 
-import {carts, addToCart} from "../data/carts.js";
+import {carts, addToCart, removeFromCart} from "../data/carts.js";
 import { products2 } from "../data/products2.js";
 console.log(products2)
 let productHtml = ''
@@ -150,6 +150,13 @@ export function updateCartQuantity() {
 
 }
 
+if (document.querySelector('.cart-quantity').innerText >= 1) {
+  
+  document.querySelector('.js-add-to-cart-button').style.display = 'none';
+
+  document.querySelector('.delete-container').style.display = 'flex';
+}
+
 document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
   button.addEventListener('click', () => {
     const productId = button.dataset.productId;
@@ -161,6 +168,14 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
     document.querySelector('.js-add-to-cart-button').style.display = 'none';
 
     document.querySelector('.delete-container').style.display = 'flex';
+
+    const cartQuantityContainer = document.querySelector('.checkout-number-container');
+
+    if (carts.length === 0) {
+      cartQuantityContainer.style.display = 'none';
+    } else {
+      cartQuantityContainer.style.display = 'flex';
+    }
 
   });
 });
@@ -178,7 +193,32 @@ document.querySelectorAll('.red-plus').forEach((button) => {
 
 updateCartQuantity()
 
-console.log(carts)
+
+document.querySelectorAll('.delete-button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const productId = button.dataset.productId;
+    removeFromCart(productId);
+
+    document.querySelector('.delete-container').style.display = 'none';
+
+    document.querySelector('.js-add-to-cart-button').style.display = 'block';
+
+    const cartQuantityContainer = document.querySelector('.checkout-number-container');
+
+    if (carts.length === 0) {
+      cartQuantityContainer.style.display = 'none';
+    };
+
+    updateCartQuantity();
+    
+  });
+});
+
+const cartQuantityContainer = document.querySelector('.checkout-number-container');
+
+if (carts.length === 0) {
+  cartQuantityContainer.style.display = 'none';
+};
 
 let colorEn = document.querySelector('.div-1')
 
