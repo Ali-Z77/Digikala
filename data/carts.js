@@ -1,14 +1,13 @@
 
-
 export let carts = JSON.parse(localStorage.getItem('carts'));
 
 if (carts === null) {
   carts = [];
-}
+};
 
 if (carts.productId === {}) {
   carts = [];
-}
+};
 
 export function saveCarts() {
   localStorage.setItem('carts', JSON.stringify(carts));
